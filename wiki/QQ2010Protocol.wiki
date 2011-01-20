@@ -23,7 +23,7 @@ Captured packets based QQ 2010 International
 		8E C8 78 FC 1F B2 BA B7 BE C6 F0 32 FF AE 50 FF
 		E1 EF 2A 59 B8 36 03
 		
-		*Header:*	02	;Protocol Start Flag
+		Header:	02	;Protocol Start Flag
 			1E 0D	;Client Version
 			00 91	;Cmd (Touch)
 			5B AB	;Seq Number
