@@ -177,4 +177,91 @@ TEA Decoded Result:
 	00	//Flag Touch Success or filling
 }}}
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+== 2, Captcha 0xBA ==
+
+	=== Captcha 1# ===
+	==== Client: ====
+{{{
+02 1E 0D 00 BA 4D 86 3D 0A 16 21 02 00 00 00 01
+01 01 00 00 64 1F 43 CE 3E 6C 54 72 09 1F 3F E5
+54 97 0D 1D 07 AB 98 16 3E 2F 7E 00 D4 C0 AF 48
+77 E1 F6 74 20 BB 4E 7C F0 C5 9E 3F 1C 77 C6 38
+9B F1 28 02 C8 54 B0 1D 1E 88 96 A8 7E C1 0D 32
+23 11 6D AF DE 6D 4F D1 67 38 9C CB 12 54 CC 8A
+31 1C 1A 4E 5F 92 83 14 20 0C 60 43 05 36 D1 52
+C8 E2 D6 F0 12 8C 92 10 48 BC 6B 92 17 53 E3 A5
+38 50 F6 D0 B4 63 CD 2E A3 AB E9 AC 51 47 03
+
+Header:	02 1E 0D 00 BA 4D 86 3D 0A 16 21 02 00 00 00 01
+	01 01 01 00 00 64 1F	//Refer above
+Body:	43 CE 3E 6C 54 72 09 1F 3F E5 54 97 0D 1D 07 AB	//TEA Key
+	98 16 3E 2F 7E 00 D4 C0 AF 48 77 E1 F6 74 20 BB 
+	4E 7C F0 C5 9E 3F 1C 77 C6 38 9B F1 28 02 C8 54 
+	B0 1D 1E 88 96 A8 7E C1 0D 32 23 11 6D AF DE 6D 
+	4F D1 67 38 9C CB 12 54 CC 8A 31 1C 1A 4E 5F 92 
+	83 14 20 0C 60 43 05 36 D1 52 C8 E2 D6 F0 12 8C 
+	92 10 48 BC 6B 92 17 53 E3 A5 38 50 F6 D0 B4 63 
+	CD 2E A3 AB E9 AC 51 47//TEA Value
+Tail:	03
+
+TEA Value Decrypted:
+	00 01 00 00 04 09 01 E0 00 00 03 30 00 00 00 01 
+	00 00 0B C5 00 38 FF AC 0A 86 BB CD 39 0B D7 7D 
+	C2 F2 19 1E C1 BA 1D 75 54 8E 2E F8 F7 64 BF F8 
+	C8 6F B9 79 66 6D DD 39 A0 4A 56 16 5B F6 D7 15 
+	FA 6C 92 4C 02 9F 74 0B E9 9A 05 37 96 31 03 00 
+	05 00 00 00 00 00 00 00
+
+	00 01	//Fixed
+	00 00 04 09 01 E0	//Data1 Version Depended
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 38	//Token Size
+	FF AC 0A 86 BB CD 39 0B D7 7D C2 F2 19 1E C1 BA
+	1D 75 54 8E 2E F8 F7 64 BF F8 C8 6F B9 79 66 6D
+	DD 39 A0 4A 56 16 5B F6 D7 15 FA 6C 92 4C 02 9F
+	74 0B E9 9A 05 37 96 31//Token Got thru TOUCH
+	03 00 05 00 00 00 00 00 00 00	//Fixed
+}}}
+
+-----------------------------------------------------------------------
+
+	=== Captcha 1# ===
+	==== Server: ====
+{{{	
+02 1E 0D 00 BA 4D 86 3D 0A 16 21 00 00 00 6E 0D
+32 31 42 96 B5 F5 61 A2 DF 84 76 19 59 D7 11 86
+5B 3D 7A 1A 9B 53 9B FF 08 A1 1D 8B DF 61 70 0E
+00 2F 94 D6 3C FA 05 0B 69 CE 2A 6E EC 25 A0 CF
+82 6B 8B 93 37 99 7E 16 F8 AE 91 0E A4 D1 DD 08
+72 92 62 67 87 E2 D7 7A D6 47 07 3C B5 D6 03
+	
+Header:	02 1E 0D 00 BA 4D 86 3D 0A 16 21 00 00 00	//Refer above
+Body:	6E 0D 32 31 42 96 B5 F5 61 A2 DF 84 76 19
+	59 D7 11 86 5B 3D 7A 1A 9B 53 9B FF 08 A1 
+	1D 8B DF 61 70 0E 00 2F 94 D6 3C FA 05 0B
+	69 CE 2A 6E EC 25 A0 CF 82 6B 8B 93 37 99
+	7E 16 F8 AE 91 0E A4 D1 DD 08 72 92 62 67
+	87 E2 D7 7A D6 47 07 3C B5 D6	//TEA Value using Key Requested
+Tail:	03
+
+TEA Value Decrypted:
+	03 00 05 00 00 00 00 00 00 38 2B 7A 08 5B 7C 62 
+	66 D4 CB 81 C1 7A AB E0 82 EB 6B A0 4F 6F B0 B4 
+	A9 55 63 03 9C 86 F1 74 7F 02 12 27 46 56 52 88 
+	DD 62 3A 48 6E 73 4D 24 ED 96 DE 96 04 69 65 A9 
+	75 63
+	
+	03	//Flag Check Result, 03 Successful, 04 Captcha Needed
+	00 05	//Fixed
+	00	//Flag Captcha IsNeeded
+	00 00 00 00	//All 00 IF NOT Need Captcha, IF Need, 00 00 01 23
+	00 38	//Token Size
+	2B 7A 08 5B 7C 62 66 D4 CB 81 C1 7A AB E0 82 EB
+	6B A0 4F 6F B0 B4 A9 55 63 03 9C 86 F1 74 7F 02
+	12 27 46 56 52 88 DD 62 3A 48 6E 73 4D 24 ED 96
+	DE 96 04 69 65 A9 75 63//Token
+}}}
+
+-----------------------------------------------------------------------
