@@ -14,12 +14,13 @@ Captured packets based QQ 2010 International
 == 1, Touch 0x91 ==
 
 	=== Touch #1 ===
-	==== Client: ====	02 1E 0D 00 91 5B AB 3D 0A 16 21 02 00 00 00 01
+	==== Client: ====
+	{{{	02 1E 0D 00 91 5B AB 3D 0A 16 21 02 00 00 00 01
 		01 01 00 00 64 1F 5C 6E 23 B6 95 1E 43 08 CC 35
 		0A CE 6C C2 5E 25 A0 3A 1A AC 54 20 4C 4D 02 88
 		BC D2 06 6B 17 6F FF F0 6C B4 46 8A 9A 82 C6 17
 		8E C8 78 FC 1F B2 BA B7 BE C6 F0 32 FF AE 50 FF
-		E1 EF 2A 59 B8 36 03
+		E1 EF 2A 59 B8 36 03	}}}
 	
 		Header:	02	;Protocol Start Flag
 			1E 0D	;Client Version
