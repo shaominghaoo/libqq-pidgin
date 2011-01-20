@@ -15,7 +15,7 @@ Captured packets based QQ 2010 International
 
 	=== Touch #1 ===
 	==== Client: ====
-		{{{	
+{{{
 		02 1E 0D 00 91 5B AB 3D 0A 16 21 02 00 00 00 01
 		01 01 00 00 64 1F 5C 6E 23 B6 95 1E 43 08 CC 35
 		0A CE 6C C2 5E 25 A0 3A 1A AC 54 20 4C 4D 02 88
@@ -23,14 +23,12 @@ Captured packets based QQ 2010 International
 		8E C8 78 FC 1F B2 BA B7 BE C6 F0 32 FF AE 50 FF
 		E1 EF 2A 59 B8 36 03
 		
-	
 		Header:	02	;Protocol Start Flag
 			1E 0D	;Client Version
 			00 91	;Cmd (Touch)
 			5B AB	;Seq Number
 			3D 0A 16 21	;QQ number (Little Endian)
-			02 00 00 00 01 01 01 00 00 64 1F
-			;Unknown filling, 1F differs among versions
+			02 00 00 00 01 01 01 00 00 64 1F	;Unknown filling, 1F differs among versions
 		Body:	5C 6E 23 B6 95 1E 43 08 CC 35 0A CE 6C C2 5E 25	
 			;128bit Key of TEA
 			A0 3A 1A AC 54 20 4C 4D 02 88 BC D2 06 6B 17 6F 
@@ -47,11 +45,13 @@ Captured packets based QQ 2010 International
 			00 00 04 09 01 E0	;Data1 Version Depended
 			00 00 03 30 00 00 00 01 00 00 0B C5	;Data2 Version Depended
  			00 00 00 00 00 00 00 00 00 00 00 00 00 00 00	;15bytes Zero at Touch #1
-		
-		}}}
+
+}}}
 ------------------------------------------------------------------------
 	=== Touch #1 ===
-	====Server:====	02 1E 0D 00 91 5B AB 3D 0A 16 21 00 00 00 7F 54
+	====Server:====	
+{{{
+		02 1E 0D 00 91 5B AB 3D 0A 16 21 00 00 00 7F 54
 		23 70 EB 3A 04 47 60 9C 81 3F BF 14 85 C8 64 D8
 		2E 2F AD 54 E9 5A E3 DD 28 B8 68 D6 2B F1 A6 72
 		77 82 B3 10 98 94 F3 B6 8B 5C B5 66 FD 6D 5F 4F
@@ -95,7 +95,7 @@ Captured packets based QQ 2010 International
 			00 00 00 09	;Server Flag
 			00 00 00 00	;Server Version
 			70 5A 8A D9	;IP of Redirection Server
-
+}}}
 ------------------------------------------------------------------------
 	Touch #2 Redirect
 	Client:	02 1E 0D 00 91 5B AC 3D 0A 16 21 02 00 00 00 01
