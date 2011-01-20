@@ -23,12 +23,13 @@ Captured packets based QQ 2010 International
 		8E C8 78 FC 1F B2 BA B7 BE C6 F0 32 FF AE 50 FF
 		E1 EF 2A 59 B8 36 03
 		
-		Header:	02	;Protocol Start Flag
+		*Header:*	02	;Protocol Start Flag
 			1E 0D	;Client Version
 			00 91	;Cmd (Touch)
 			5B AB	;Seq Number
 			3D 0A 16 21	;QQ number (Little Endian)
-			02 00 00 00 01 01 01 00 00 64 1F	;Unknown filling, 1F differs among versions
+			02 00 00 00 01 01 01 00 00 64 1F
+			;Unknown filling, 1F differs among versions
 		Body:	5C 6E 23 B6 95 1E 43 08 CC 35 0A CE 6C C2 5E 25	
 			;128bit Key of TEA
 			A0 3A 1A AC 54 20 4C 4D 02 88 BC D2 06 6B 17 6F 
@@ -49,7 +50,7 @@ Captured packets based QQ 2010 International
 }}}
 ------------------------------------------------------------------------
 	=== Touch #1 ===
-	====Server:====	
+	==== Server: ====	
 {{{
 		02 1E 0D 00 91 5B AB 3D 0A 16 21 00 00 00 7F 54
 		23 70 EB 3A 04 47 60 9C 81 3F BF 14 85 C8 64 D8
