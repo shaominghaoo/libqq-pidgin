@@ -4,7 +4,7 @@
 = Introduction =
 
 Most works based on the research of many Contributors
-I've read Xiaoxia's 2008 Protocol, cqwty's 2009 Protocol, especially shiqishe's QQAnalyzer
+I've read Xiaoxia's 2008 Protocol, cqwty's 2009 Protocol, especially shiqishe's QQAnalyzer helps a lot
 Massive Thanks to these contributors
 Captured packets based QQ 2010 International
 
