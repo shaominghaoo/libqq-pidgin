@@ -22,7 +22,7 @@ Captured packets based QQ 2010 International
 		BC D2 06 6B 17 6F FF F0 6C B4 46 8A 9A 82 C6 17
 		8E C8 78 FC 1F B2 BA B7 BE C6 F0 32 FF AE 50 FF
 		E1 EF 2A 59 B8 36 03
-		}}}
+		
 	
 		Header:	02	;Protocol Start Flag
 			1E 0D	;Client Version
@@ -47,7 +47,8 @@ Captured packets based QQ 2010 International
 			00 00 04 09 01 E0	;Data1 Version Depended
 			00 00 03 30 00 00 00 01 00 00 0B C5	;Data2 Version Depended
  			00 00 00 00 00 00 00 00 00 00 00 00 00 00 00	;15bytes Zero at Touch #1
-
+		
+		}}}
 ------------------------------------------------------------------------
 	=== Touch #1 ===
 	====Server:====	02 1E 0D 00 91 5B AB 3D 0A 16 21 00 00 00 7F 54
