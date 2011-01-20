@@ -28,14 +28,11 @@ Header:	02	;Protocol Start Flag
 	00 91	;Cmd (Touch)
 	5B AB	;Seq Number
 	3D 0A 16 21	;QQ number (Little Endian)
-	02 00 00 00 01 01 01 00 00 64 1F
-	;Unknown filling, 1F differs among versions
-	Body:	5C 6E 23 B6 95 1E 43 08 CC 35 0A CE 6C C2 5E 25	
-	;128bit Key of TEA
+	02 00 00 00 01 01 01 00 00 64 1F	;Unknown filling, 1F differs among versions
+	Body:	5C 6E 23 B6 95 1E 43 08 CC 35 0A CE 6C C2 5E 25	;128bit Key of TEA
 	A0 3A 1A AC 54 20 4C 4D 02 88 BC D2 06 6B 17 6F 
 	FF F0 6C B4 46 8A 9A 82 C6 17 8E C8 78 FC 1F B2 
-	BA B7 BE C6 F0 32 FF AE 50 FF E1 EF 2A 59 B8 36
-	;48bytes Encrypted Code of TEA
+	BA B7 BE C6 F0 32 FF AE 50 FF E1 EF 2A 59 B8 36	;48bytes Encrypted Code of TEA
 Tail:	03	;Protocol End Flag
 
 TEA Decode Result:
@@ -70,8 +67,7 @@ Body:	7F 54 23 70 EB 3A 04 47 60 9C 81 3F BF 14 85 C8
 	5F 4F 24 E4 81 2B 8D 5D DE BB AD EE 69 5C 66 C6 
 	06 5F BC 21 12 97 D5 48 A0 87 3E 5F 86 17 16 32 
 	E5 69 45 28 22 7D 35 ED 87 4D F9 F4 F1 F1 4C 2D 
-	C1 AE 72 A4 6E CA 8E E4
-	;104bytes Encrypted Code by TEA, Key same as above
+	C1 AE 72 A4 6E CA 8E E4	;104bytes Encrypted Code by TEA, Key same as above
 Tail:	03
 
 TEA Decoded Result:
@@ -90,8 +86,7 @@ TEA Decoded Result:
 	D0 DB 26 ED AA 98 68 B3 53 6C 29 28 0C DD 6B BD 
 	FE EA DF DE 43 78 FE 99 79 D1 E0 F0 E0 69 92 05 
 	C7 D5 C4 BE 04 B5 17 46 C7 BA 34 C5 94 A8 C5 36 
-	42 BB C8 47 22 EA 01 24
-	;56bytes Token
+	42 BB C8 47 22 EA 01 24	;56bytes Token
 	01	;Flag Redirection needed
 	01	;Number Redirected
 	00 00 00 09	;Server Flag
