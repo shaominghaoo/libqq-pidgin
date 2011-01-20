@@ -47,6 +47,7 @@ TEA Decode Result:
 
 }}}
 ------------------------------------------------------------------------
+
 	=== Touch #1 ===
 	==== Server: ====	
 {{{
@@ -97,7 +98,7 @@ TEA Decoded Result:
 ------------------------------------------------------------------------
 
 	=== Touch #2 Redirect ===
-	== Client: ==
+	==== Client: ====
 {{{
 02 1E 0D 00 91 5B AC 3D 0A 16 21 02 00 00 00 01
 01 01 00 00 64 1F 73 41 D9 BD FD A5 E0 47 BE 82
@@ -132,6 +133,7 @@ TEA Decode Result:
 	//00 00 00 09 //Server Flag	
 	//00 00 00 00 //Server Version	
 	//FF FF FF FF //Originally IP of Redirection Server, Now all FF
+}}}
 
 ------------------------------------------------------------------------
 
@@ -173,3 +175,4 @@ TEA Decoded Result:
 	DD 39 A0 4A 56 16 5B F6 D7 15 FA 6C 92 4C 02 9F 
 	74 0B E9 9A 05 37 96 31		//56bytes Token
 	00	//Flag Touch Success or filling
+}}}
