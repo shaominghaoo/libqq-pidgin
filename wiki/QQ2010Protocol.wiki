@@ -14,7 +14,7 @@ Captured packets based QQ 2010 International
 == 1, Touch 0x91 ==
 
 	=== Touch #1 ===
-	===== Client: =====
+	==== Client: ====
 {{{
 		02 1E 0D 00 91 5B AB 3D 0A 16 21 02 00 00 00 01
 		01 01 00 00 64 1F 5C 6E 23 B6 95 1E 43 08 CC 35
@@ -98,13 +98,15 @@ Captured packets based QQ 2010 International
 			70 5A 8A D9	;IP of Redirection Server
 }}}
 ------------------------------------------------------------------------
-	Touch #2 Redirect
-	Client:	02 1E 0D 00 91 5B AC 3D 0A 16 21 02 00 00 00 01
-		01 01 00 00 64 1F 73 41 D9 BD FD A5 E0 47 BE 82
-		27 16 A1 27 92 11 02 43 7F 62 A7 48 F6 97 D3 7A
-		48 85 CB 0E 6F 80 DD 69 AD 18 5A 50 EB 63 C0 BD
-		2E B7 DC CC 2E CB 8F 79 AB A4 CB A3 67 30 EA 68
-		6D 21 2E 44 A6 22 03
+	=== Touch #2 Redirect ===
+	== Client: ==
+{{{
+02 1E 0D 00 91 5B AC 3D 0A 16 21 02 00 00 00 01
+01 01 00 00 64 1F 73 41 D9 BD FD A5 E0 47 BE 82
+27 16 A1 27 92 11 02 43 7F 62 A7 48 F6 97 D3 7A
+48 85 CB 0E 6F 80 DD 69 AD 18 5A 50 EB 63 C0 BD
+2E B7 DC CC 2E CB 8F 79 AB A4 CB A3 67 30 EA 68
+6D 21 2E 44 A6 22 03
 		
 		Header:	02	;Protocol Start Flag
 			1E 0D	;Client Version
