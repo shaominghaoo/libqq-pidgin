@@ -2,7 +2,7 @@
 First you need a Pidgin or LibPurple building environment.
 
 See Instructions in Links below:
-http://developer.pidgin.im/wiki/Installing%20Pidgin#Compiling
-http://developer.pidgin.im/wiki/BuildingWinPidgin
+[http://developer.pidgin.im/wiki/Installing%20Pidgin#Compiling]
+[http://developer.pidgin.im/wiki/BuildingWinPidgin]
 
 SVN checkout src and replace original \libpurple\protocols\qq in Pidgin source code.
