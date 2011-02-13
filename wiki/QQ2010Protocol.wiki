@@ -15,6 +15,7 @@ Captured packets based QQ 2010 International
 
 	=== Touch #1 ===
 	==== Client: ====
+
 {{{
 02 1E 0D 00 91 5B AB 3D 0A 16 21 02 00 00 00 01
 01 01 00 00 64 1F 5C 6E 23 B6 95 1E 43 08 CC 35
@@ -44,12 +45,13 @@ TEA Decode Result:
 	00 00 04 09 01 E0	//Data1 Version Depended
 	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
  	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00	//15bytes Zero at Touch #1
-
 }}}
+
 ------------------------------------------------------------------------
 
 	=== Touch #1 ===
 	==== Server: ====	
+
 {{{
 02 1E 0D 00 91 5B AB 3D 0A 16 21 00 00 00 7F 54
 23 70 EB 3A 04 47 60 9C 81 3F BF 14 85 C8 64 D8
@@ -99,6 +101,7 @@ TEA Decoded Result:
 
 	=== Touch #2 Redirect ===
 	==== Client: ====
+
 {{{
 02 1E 0D 00 91 5B AC 3D 0A 16 21 02 00 00 00 01
 01 01 00 00 64 1F 73 41 D9 BD FD A5 E0 47 BE 82
@@ -139,6 +142,7 @@ TEA Decode Result:
 
 	=== Touch #2 Redirect ===
 	==== Server: ====
+
 {{{
 02 1E 0D 00 91 5B AC 3D 0A 16 21 00 00 00 17 1C
 48 43 A0 66 8F BC 40 77 0D B5 16 2E FF EA 02 E6
@@ -227,8 +231,9 @@ TEA Value Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 1#(IF !CAPTCHA NEEDED) ===
+	=== Captcha 1# (IF !CAPTCHA NEEDED) ===
 	==== Server: ====
+
 {{{	
 02 1E 0D 00 BA 4D 86 3D 0A 16 21 00 00 00 6E 0D
 32 31 42 96 B5 F5 61 A2 DF 84 76 19 59 D7 11 86
@@ -266,8 +271,9 @@ TEA Value Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 1#(IF CAPTCHA NEEDED) ===
+	=== Captcha 1# (IF CAPTCHA NEEDED) ===
 	==== Server: ====
+
 {{{
 02 1E 0D 00 BA 54 05 1B 6F 70 E9 00 00 00 7C F9
 4D 18 09 7B 42 7C 12 77 30 1F 3B 40 5A 1A 4B E1
@@ -490,8 +496,9 @@ Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 1#(IF CAPTCHA NEEDED) ===
+	=== Captcha 1# (IF CAPTCHA NEEDED) ===
 	==== Server: ====
+
 {{{
 02 1E 0D 00 BA 54 06 1B 6F 70 E9 02 00 00 00 01
 01 01 00 00 64 1F 1F A1 0D A1 4F 36 1D 42 34 69
@@ -548,7 +555,7 @@ TEA Value Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 2#(IF CAPTCHA NEEDED) ===
+	=== Captcha 2# (IF CAPTCHA NEEDED) ===
 	==== Server: ====
 	
 {{{
@@ -663,10 +670,10 @@ Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 3#(IF CAPTCHA NEEDED) ===
+	=== Captcha 3# (IF CAPTCHA NEEDED) ===
 	==== Client: ====
-{{{
 
+{{{
 02 1E 0D 00 BA 0D 34 1B 6F 70 E9 02 00 00 00 01
 01 01 00 00 64 1F 34 32 09 43 C2 6C EF 16 FC E6
 46 04 9F FB 4A 64 A7 3F 17 91 E7 E5 A3 D7 F7 A0
@@ -721,12 +728,15 @@ Decrypted:
 	4B F5 CF CC D2 F0 16 82 47 3B 4B 09 E0 EE 1D 47 
 	1F 2A 8B 40 47 D6 08 42 45 DF 03 77 BA AF 3D F2 
 	A5 2A C9 08 E5 07 BA 57 //Token_Submit_Captcha
+}}}
 
 -----------------------------------------------------------------------
 
-	Captcha 3# (IF CAPTCHA NEEDED) 
-
-	Server:	02 1E 0D 00 BA 0D 34 1B 6F 70 E9 00 00 00 4C 02
+	=== Captcha 3# (IF CAPTCHA NEEDED) ===
+	==== Server: ====
+	
+{{{
+02 1E 0D 00 BA 0D 34 1B 6F 70 E9 00 00 00 4C 02
 89 7A 52 C3 1C 29 CC 2A 67 8D 60 EB FA 74 8B 64
 88 19 E5 50 AC DE 2F FB D7 64 14 63 91 B8 46 3C
 7A 0F 92 F2 D8 78 2A C4 BB BE 08 3E 34 EE 52 4F
@@ -757,3 +767,9 @@ TEA Value Decrypted:
 }}}
 
 -----------------------------------------------------------------------
+
+== 3, Authenticate 0xDD ==
+
+	=== Client: ===
+{{{
+}}}
