@@ -185,7 +185,7 @@ TEA Decoded Result:
 
 == 2, Captcha 0xBA ==
 
-	=== Captcha 1# ===
+	=== Captcha #1 ===
 	==== Client: ====
 {{{
 02 1E 0D 00 BA 4D 86 3D 0A 16 21 02 00 00 00 01
@@ -231,7 +231,7 @@ TEA Value Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 1# (IF !CAPTCHA NEEDED) ===
+	=== Captcha #1 (IF !CAPTCHA NEEDED) ===
 	==== Server: ====
 
 {{{	
@@ -271,7 +271,7 @@ TEA Value Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 1# (IF CAPTCHA NEEDED) ===
+	=== Captcha #1 (IF CAPTCHA NEEDED) ===
 	==== Server: ====
 
 {{{
@@ -496,7 +496,7 @@ Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 1# (IF CAPTCHA NEEDED) ===
+	=== Captcha #1 (IF CAPTCHA NEEDED) ===
 	==== Server: ====
 
 {{{
@@ -555,7 +555,7 @@ TEA Value Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 2# (IF CAPTCHA NEEDED) ===
+	=== Captcha #2 (IF CAPTCHA NEEDED) ===
 	==== Server: ====
 	
 {{{
@@ -670,7 +670,7 @@ Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 3# (IF CAPTCHA NEEDED) ===
+	=== Captcha #3 (IF CAPTCHA NEEDED) ===
 	==== Client: ====
 
 {{{
@@ -732,7 +732,7 @@ Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha 3# (IF CAPTCHA NEEDED) ===
+	=== Captcha #3 (IF CAPTCHA NEEDED) ===
 	==== Server: ====
 	
 {{{
