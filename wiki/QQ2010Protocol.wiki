@@ -225,7 +225,7 @@ TEA Value Decrypted:
 	FF AC 0A 86 BB CD 39 0B D7 7D C2 F2 19 1E C1 BA
 	1D 75 54 8E 2E F8 F7 64 BF F8 C8 6F B9 79 66 6D
 	DD 39 A0 4A 56 16 5B F6 D7 15 FA 6C 92 4C 02 9F
-	74 0B E9 9A 05 37 96 31//Token_Touch Got thru TOUCH
+	74 0B E9 9A 05 37 96 31 //Token_Touch Got thru TOUCH
 	03 00 05 00 00 00 00 00 00 00	//Fixed
 }}}
 
@@ -817,8 +817,8 @@ B7 82 67 39 52 7F 1D 70 92 AC AC AE E8 53 66 62
 
 	
 Header:	02 1E 0D 00 DD 13 9B 3D 0A 16 21 02 00 00 00 01
-	01 01 00 00 64 1F	;Refer above
-Body:	17 B1 11 99 74 3A D6 6B DD A4 E9 80 F6 95 A6 D4 ;TEA Key
+	01 01 00 00 64 1F	//Refer above
+Body:	17 B1 11 99 74 3A D6 6B DD A4 E9 80 F6 95 A6 D4 //TEA Key
 	A7 F7 A5 43 52 62 BC 6B DE BC 73 5F E6 A3 AD 9E 
 	ED 53 12 D2 A1 20 66 5D 77 B3 CF E9 C0 81 E6 15 
 	A2 93 DA 32 C6 00 1E 8D 0F 51 D8 B0 84 94 06 78 
@@ -857,7 +857,7 @@ Body:	17 B1 11 99 74 3A D6 6B DD A4 E9 80 F6 95 A6 D4 ;TEA Key
 	AE 94 FA 50 BF 31 8A B1 1B 34 68 B4 A6 2D 6E 06 
 	41 B9 6E FF F9 6D 12 0D 37 C5 39 3A 4D 13 33 99 
 	E8 73 81 06 62 7A E6 20 29 6D 80 3E 46 08 05 80 
-	C5 39 76 88 FA E2 6E 16	;TEA Value
+	C5 39 76 88 FA E2 6E 16	//TEA Value
 Tail:	03
 
 TEA Value Decrypted:
@@ -898,17 +898,17 @@ TEA Value Decrypted:
 	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-	00 00 00 00 00 00 00 00 00	;601bytes
+	00 00 00 00 00 00 00 00 00	//601bytes
 
-	00 DE 00 01	;Fixed
-	00 00 04 09 01 E0	;Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	;Data2 Version Depended
-	00 38	;Token_Capcha Size
+	00 DE 00 01	//Fixed
+	00 00 04 09 01 E0	//Data1 Version Depended
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 38	//Token_Capcha Size
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
 	C3 DA 40 94 9A 50 C4 B0 14 52 3D 47 DC 5B 77 6F
 	DA CC B3 D1 50 3B A4 9B 19 32 D8 29 7A 59 1A 05
-	AC 6E A0 90 DC 72 BF 3D	;Token_Captcha
-	00 78	;Authentication TEA Encryted Data Size (120bytes), TEA Key is MD5(MD5(Password))
+	AC 6E A0 90 DC 72 BF 3D	//Token_Captcha
+	00 78	//Authentication TEA Encryted Data Size (120bytes), TEA Key is MD5(MD5(Password))
 	CF CE EF 5A 3F C5 C2 CF 2F 60 E7 22 9C 65 50 FB
 	34 8B B9 1C C4 AD 16 39 F2 53 17 C3 34 B6 EA 4F
 	06 85 72 06 F5 9A 3C 96 A3 65 45 CD 7E F7 88 3F
@@ -916,34 +916,34 @@ TEA Value Decrypted:
 	F7 FE FC 5B CD 6F 21 AE 1E B3 0A DF A6 B1 01 66
 	3A CA 88 53 75 2F F5 53 5D 35 06 E8 AA DC CE 27
 	A0 79 FD 85 3F 02 69 FD 32 3C 1D CF 42 1A 03 4F
-	0D 39 5F 92 61 B9 5F 1E	;Authentication Data
-	00 14	;Size of Data below
+	0D 39 5F 92 61 B9 5F 1E	//Authentication Data
+	00 14	//Size of Data below
 	FB D4 9A 8C 63 7A D6 0C A5 B3 48 43 EB D2 D3 F9 
-	CD 8F AA 6B 	;Unknown Random Data
-	01 77 2E 01	;Version Depended
-	BC A7 5E 24	;Version Depended
-	00 10	;Size of Key0_Auth below
-	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3	;Key0_Auth, As the TEA Key to Decrypt Response TEA Value
-	02 AD 98 B7 D2	;Fixed
-	00 10	;Size of Key1_Auth below
-	7E D6 F3 98 B1 03 E9 C8 96 32 72 4F 7E 2E 7B D0	;Key1_Auth, Version Depended
-	00 ... 00	;328bytes fill
+	CD 8F AA 6B 	//Unknown Random Data
+	01 77 2E 01	//Version Depended
+	BC A7 5E 24	//Version Depended
+	00 10	//Size of Key0_Auth below
+	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3	//Key0_Auth, As the TEA Key to Decrypt Response TEA Value
+	02 AD 98 B7 D2	//Fixed
+	00 10	//Size of Key1_Auth below
+	7E D6 F3 98 B1 03 E9 C8 96 32 72 4F 7E 2E 7B D0	//Key1_Auth, Version Depended
+	00 ... 00	//328bytes fill
 
 Authentication Data Decypted:
-	1B 9B CC D9	;Unknown Random
-	00 01	;Fixed
-	3D 0A 16 21	;QQ Number
-	00 00 03 30 00 00 00 01 00 00 0B C5	;Data2 in TOUCH Header
-	00 00 01	;Fixed
-	FA B6 A8 C8 5F C8 2A 66 1D B6 29 E5 D8 6E BE E9	;QQ MD5(Password)
-	4D 34 57 33	;time32_t, Last Login Time, Just Set Time Now
-	00 00 00 00 00 00 00 00 00 00 00 00 00	;13bytes Fixed
-	72 65 B0 6A	;ip
-	00 00 00 00 00 00 00 00;8bytes Fixed
-	00 10	;Size of Key below
-	31 84 FD 03 DB 59 5A 4A A6 71 1B 11 41 3A 87 91	;Key0, Version Depended
+	1B 9B CC D9	//Unknown Random
+	00 01	//Fixed
+	3D 0A 16 21	//QQ Number
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 in TOUCH Header
+	00 00 01	//Fixed
+	FA B6 A8 C8 5F C8 2A 66 1D B6 29 E5 D8 6E BE E9	//QQ MD5(Password)
+	4D 34 57 33	//time32_t, Last Login Time, Just Set Time Now
+	00 00 00 00 00 00 00 00 00 00 00 00 00	//13bytes Fixed
+	72 65 B0 6A	//ip
+	00 00 00 00 00 00 00 00//8bytes Fixed
+	00 10	//Size of Key below
+	31 84 FD 03 DB 59 5A 4A A6 71 1B 11 41 3A 87 91	//Key0, Version Depended
 	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3
-;Key0_Auth Same as above	
+//Key0_Auth Same as above	
 }}}
 
 -----------------------------------------------------------------------
@@ -972,7 +972,7 @@ B3 57 AB 5B AE 74 9C 87 CC B7 33 A3 C3 7B 06 2B
 3E 8D 24 B8 2E 7A CE 3B BD C3 8B 2F FA 59 48 D0
 C4 BA C2 66 0E 57 03
 
-Header:	02 64 1F 00 DD 13 9B 3D 0A 16 21 00 00 00	;Refer above
+Header:	02 64 1F 00 DD 13 9B 3D 0A 16 21 00 00 00	//Refer above
 Body:	9F 04 56 0C 98 05 B6 CE 5C C5 47 68 6B 47 AE DF 
 	2C 57 28 CC FC AB 40 13 53 1C D4 21 70 C1 5A 78 
 	08 F4 2C F1 07 41 9F AE 94 0D 93 A1 ED C7 0C A0 
@@ -991,7 +991,7 @@ Body:	9F 04 56 0C 98 05 B6 CE 5C C5 47 68 6B 47 AE DF
 	71 C5 84 95 31 7E 4C 72 02 66 01 7E 9C 13 61 29 
 	CE 2A 62 E0 A0 C0 5C DF 33 7D BF DB 16 3F 19 42 
 	81 C6 3E 8D 24 B8 2E 7A CE 3B BD C3 8B 2F FA 59 
-	48 D0 C4 BA C2 66 0E 57	;TEA Encypted Value, Key is Key0_Auth in Requested Packet IF Authentication Successful or Key of Requested Body First 16bytes IF Authentication Fails 
+	48 D0 C4 BA C2 66 0E 57	//TEA Encypted Value, Key is Key0_Auth in Requested Packet IF Authentication Successful or Key of Requested Body First 16bytes IF Authentication Fails 
 Tail:	03
 
 TEA Decrypted Value:
@@ -1012,18 +1012,18 @@ TEA Decrypted Value:
 	FD 9E 47 A0 20 CF 66 19 DD 56 37 26 C9 E8 C9 F9 
 	01 AE BF BE 41 0E C1 47 6F 77 65 55 45 34 59 5A 
 	6A 34 72 6A 58 50 67 66 56 00 00 65 4B 47 35 46 
-	34 56 6E 6D 6E 67 34 76 67 53 74 00 00 	;285bytes
+	34 56 6E 6D 6E 67 34 76 67 53 74 00 00 	//285bytes
 	
-	01 19	;Size of Value - Size(2bytes) - Tail(2bytes)
-	00	;Flag Authentication, 00 Successful, 33 or 51 Failure, BF QQ Number Not Exists, 34 Password Incorrect
-	00 20	;Token0_Auth Size (32bytes)
+	01 19	//Size of Value - Size(2bytes) - Tail(2bytes)
+	00	//Flag Authentication, 00 Successful, 33 or 51 Failure, BF QQ Number Not Exists, 34 Password Incorrect
+	00 20	//Token0_Auth Size (32bytes)
 	3E 6C AD C9 5D 38 0A BC AB D5 D9 15 1F CC D7 74
 	E7 51 8A DF 23 57 5D C1 F1 D1 8D 73 C0 A9 9C 1F
-;Token0_Auth
-	00 98	;Size of TIME + Token1_Auth
-	00 02	;Fixed Fill
-	4D 39 31 E5	;time32_t Used in VerifyE5 Request
-	00 90	;Token1_Auth Size (144bytes)
+//Token0_Auth
+	00 98	//Size of TIME + Token1_Auth
+	00 02	//Fixed Fill
+	4D 39 31 E5	//time32_t Used in VerifyE5 Request
+	00 90	//Token1_Auth Size (144bytes)
 	3D F5 BA 5F 0D 67 7B E5 86 F1 15 26 C4 02 DD E1
 	C8 88 B3 EC 01 9F 2B F8 91 96 05 5D C6 49 BA 52
 	15 E6 11 FF 41 77 3E 85 D3 62 F1 A1 87 98 79 60
@@ -1033,19 +1033,19 @@ TEA Decrypted Value:
 	48 71 9D E4 99 6A 05 FE 6C 18 E7 21 2C 92 ED 26
 	30 28 09 43 D0 74 77 1C 23 9A D1 3F A4 F9 44 AB
 	69 D3 4C 52 72 C0 72 08 9A 70 CC B6 47 3A F7 76
-;Token1_Auth
-	00 38	;Token2_Auth Size (56bytes)
+//Token1_Auth
+	00 38	//Token2_Auth Size (56bytes)
 	85 6D EE C7 38 A6 60 BC 5B 13 C9 BC B3 C5 27 7B
 	95 CE 05 26 E4 5F A8 A7 29 0A 7F FD A3 C9 E6 FD
 	9E 47 A0 20 CF 66 19 DD 56 37 26 C9 E8 C9 F9 01
-	AE BF BE 41 0E C1 47 6F;Token2_Auth
-	77 65 55 45 34 59 5A 6A 34 72 6A 58 50 67 66 56	;Key2_Auth Used as the Key in VerifyE5 Request Packet
-	00 00	;Fixed Fill
-	65 4B 47 35 46 34 56 6E 6D 6E 67 34 76 67 53 74	;Key3_Auth Used as the Key in VerifyE5 Response Packet
-	00 00	;Fixed Tail
+	AE BF BE 41 0E C1 47 6F//Token2_Auth
+	77 65 55 45 34 59 5A 6A 34 72 6A 58 50 67 66 56	//Key2_Auth Used as the Key in VerifyE5 Request Packet
+	00 00	//Fixed Fill
+	65 4B 47 35 46 34 56 6E 6D 6E 67 34 76 67 53 74	//Key3_Auth Used as the Key in VerifyE5 Response Packet
+	00 00	//Fixed Tail
 	
 	
-Body:	;When Authenfication Failed, Key is the TEA Key in Requested Packet, Assume It is 8B C6 DF E5 D0 47 AE C4 8F 37 97 19 9D 25 C1 01
+Body:	//When Authenfication Failed, Key is the TEA Key in Requested Packet, Assume It is 8B C6 DF E5 D0 47 AE C4 8F 37 97 19 9D 25 C1 01
 	CB A7 3E 25 24 50 4B F1 48 7D B2 01 4B E1 E7 2D
 	F9 70 8A CB 79 22 5D 4F 40 D9 C2 9E 7A F5 B4 63 
 	AE B5 FE 74 FA D9 13 13 FB 79 87 18 60 67 EE 29 
@@ -1068,17 +1068,17 @@ Decrypted:
 	20 6F 66 66 20 61 6E 64 20 4E 75 6D 20 4C 6F 63 
 	6B 20 69 73 20 6F 6E 2E 00 00
 
-	00 86	;Size of Value - Size(2bytes) - Tail(2bytes)
-	34	;Password Incorrect
-	00 00 01 02 00 00 00 00;Fixed
-	00 7B	;Length of Message below
-	59 ... 2E	;Msg in UTF8
-	00 00	;Tail
+	00 86	//Size of Value - Size(2bytes) - Tail(2bytes)
+	34	//Password Incorrect
+	00 00 01 02 00 00 00 00//Fixed
+	00 7B	//Length of Message below
+	59 ... 2E	//Msg in UTF8
+	00 00	//Tail
 }}}
 
 -----------------------------------------------------------------------
 
-== 4, VeryfyE5  0xE5 ==
+== 4, VeryfyE5----0xE5 ==
 	=== Client: ===
 
 {{{
@@ -1108,12 +1108,12 @@ B1 29 D5 FB BA FE AE 61 23 6A 04 B6 D9 6C 12 5D
 03
 
 Header:	02 1E 0D 00 E5 2D 03 3D 0A 16 21 02 00 00 00 01
-	01 01 00 00 64 1F	;Refer above
-Body:	00 38	;Token2_Auth Size
+	01 01 00 00 64 1F	//Refer above
+Body:	00 38	//Token2_Auth Size
 	85 6D EE C7 38 A6 60 BC 5B 13 C9 BC B3 C5 27 7B
 	95 CE 05 26 E4 5F A8 A7 29 0A 7F FD A3 C9 E6 FD
 	9E 47 A0 20 CF 66 19 DD 56 37 26 C9 E8 C9 F9 01
-	AE BF BE 41 0E C1 47 6F;Token2_Auth
+	AE BF BE 41 0E C1 47 6F	//Token2_Auth
 	FF FF 09 5C 12 C4 8F 29 11 6C 5F 87 47 74 EC 3F
 	F7 F0 8F 3C E0 68 5C DE CF 9E 8D 58 CC 43 4C B5
 	EE 96 EC FB E0 D9 6B 54 53 EB 2D 18 DE 0E 96 33
@@ -1131,25 +1131,25 @@ Body:	00 38	;Token2_Auth Size
 	2E 42 5B 1C F3 3E DF 3C 84 8F 31 CF B4 C7 53 D3
 	3D 78 B3 5E 57 D1 B1 9D 58 B3 AF 4C 18 15 C6 AF
 	B1 29 D5 FB BA FE AE 61 23 6A 04 B6 D9 6C 12 5D
-	4E 33 87 25 90 53 26 CC 48 C0 6F AE 75 56 8E E6	;TEA Encypted Value, Key is Key2_Auth in Authentication Response Packet
+	4E 33 87 25 90 53 26 CC 48 C0 6F AE 75 56 8E E6	//TEA Encypted Value, Key is Key2_Auth in Authentication Response Packet
 Tail:	03
 
 Decrypted Value:
-	01 0E 00 01 01	;Fixed
-	00 00 04 09 01 E0	;Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	;Data2 Version Depended
-	00 38	;Token_Captcha Size	
+	01 0E 00 01 01	//Fixed
+	00 00 04 09 01 E0	//Data1 Version Depended
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 38	//Token_Captcha Size	
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
 	C3 DA 40 94 9A 50 C4 B0 14 52 3D 47 DC 5B 77 6F
 	DA CC B3 D1 50 3B A4 9B 19 32 D8 29 7A 59 1A 05
-	AC 6E A0 90 DC 72 BF 3D	;Token_Captcha
-	00 20	;Token0_Auth Size
+	AC 6E A0 90 DC 72 BF 3D	//Token_Captcha
+	00 20	//Token0_Auth Size
 	3E 6C AD C9 5D 38 0A BC AB D5 D9 15 1F CC D7 74
-	E7 51 8A DF 23 57 5D C1 F1 D1 8D 73 C0 A9 9C 1F	;Token0_Auth
-	00 98	;Size of TIME + Token1_Auth
-	00 02	;Fixed
-	4D 39 31 E5	;time32_t in Auth Response Packet
-	00 90	;Token1_Auth
+	E7 51 8A DF 23 57 5D C1 F1 D1 8D 73 C0 A9 9C 1F	//Token0_Auth
+	00 98	//Size of TIME + Token1_Auth
+	00 02	//Fixed
+	4D 39 31 E5	//time32_t in Auth Response Packet
+	00 90	//Token1_Auth
 	3D F5 BA 5F 0D 67 7B E5 86 F1 15 26 C4 02 DD E1
 	C8 88 B3 EC 01 9F 2B F8 91 96 05 5D C6 49 BA 52
 	15 E6 11 FF 41 77 3E 85 D3 62 F1 A1 87 98 79 60
@@ -1158,8 +1158,8 @@ Decrypted Value:
 	E7 D6 0B 80 4F E3 D5 C6 BE 1A 50 CC 67 05 06 D6
 	48 71 9D E4 99 6A 05 FE 6C 18 E7 21 2C 92 ED 26
 	30 28 09 43 D0 74 77 1C 23 9A D1 3F A4 F9 44 AB
-	69 D3 4C 52 72 C0 72 08 9A 70 CC B6 47 3A F7 76	;Token1_Auth
-	00 00 01 00 00 00 00	;Fixed
+	69 D3 4C 52 72 C0 72 08 9A 70 CC B6 47 3A F7 76	//Token1_Auth
+	00 00 01 00 00 00 00	//Fixed
 }}}
 
 -----------------------------------------------------------------------
@@ -1203,7 +1203,7 @@ B9 85 1F F5 C8 D7 87 48 0B 80 88 44 70 5D 28 D8
 81 77 FA BA 52 EB 3E 8B F6 77 E9 CD 35 C6 08 EE
 77 D8 DD 83 C2 53 48 5F C2 B9 39 17 A1 B9 03
 
-Header:	02 1E 0D 00 E5 2D 03 3D 0A 16 21 00 00 00	;Refer above
+Header:	02 1E 0D 00 E5 2D 03 3D 0A 16 21 00 00 00	//Refer above
 Body:	60 47 2A 96 08 36 55 84 30 76 8A D3 DA 6F 39 A2 
 	ED BE 35 A3 90 F5 4F 60 80 3D 8C 81 64 F9 C9 4F 
 	EF B3 37 77 3B 70 F7 27 F8 B1 79 E9 6F 19 B4 45 
@@ -1237,20 +1237,19 @@ Body:	60 47 2A 96 08 36 55 84 30 76 8A D3 DA 6F 39 A2
 	92 15 B9 85 1F F5 C8 D7 87 48 0B 80 88 44 70 5D 
 	28 D8 34 26 88 E7 E5 E8 02 3A 2D C1 BB F3 98 B9 
 	41 CF 81 77 FA BA 52 EB 3E 8B F6 77 E9 CD 35 C6 
-	08 EE 77 D8 DD 83 C2 53 48 5F C2 B9 39 17 A1 B9	;Key is Key3_Auth in Authenfication Response Packet
+	08 EE 77 D8 DD 83 C2 53 48 5F C2 B9 39 17 A1 B9	//Key is Key3_Auth in Authenfication Response Packet
 Tail:	03
 
 Decrypted:
-	02 0D	;QQ Number Depended
-	01 00	;Fixed
-	72 49 38 7A 6D 33 38 51 78 35 50 34 68 70 4B 59
-;Key0_VerifyE5
-	00 00 00 01 00 00 00 64;Fixed
-	00 E4 00 03	;Unknown, Used in Login Request Packet
-	4D 39 31 E5	;time32_t
-	72 65 B6 96	;ip
-	00 00 00 00 00 00 00 00;Fixed
-	00 D0	;Token0_VerifyE5 Size
+	02 0D	//QQ Number Depended
+	01 00	//Fixed
+	72 49 38 7A 6D 33 38 51 78 35 50 34 68 70 4B 59	//Key0_VerifyE5
+	00 00 00 01 00 00 00 64//Fixed
+	00 E4 00 03	//Unknown, Used in Login Request Packet
+	4D 39 31 E5	//time32_t
+	72 65 B6 96	//ip
+	00 00 00 00 00 00 00 00//Fixed
+	00 D0	//Token0_VerifyE5 Size
 	B6 DB 1B 29 2E D5 DA 1E 00 72 C0 12 E3 AE 2A 2E
 	03 57 15 00 73 39 D4 A2 0D 16 EC 6E DB 7B 9F E0
 	76 EE 4B 2D A1 64 D9 14 40 F2 65 C7 23 A6 F6 5C
@@ -1263,9 +1262,9 @@ Decrypted:
 	AE 91 A9 29 84 69 4B 29 F0 3C C3 F7 BB F7 E9 AC
 	FA 6C D0 CC 54 83 85 E6 AC 99 E9 27 8E B5 4E 15
 	70 29 98 0C C5 32 4D 3C F6 2C 4E 96 74 54 51 01
-	87 8A AE AB 13 A1 76 87 CB B6 AE 5D D9 37 62 C7	;Token0_VerifyE5
-	6B 43 52 6D 74 5A 6B 6A 43 64 68 54 54 63 68 4D	;Key1_VerifyE5
-	00 78	;Token1_VerifyE5 Size
+	87 8A AE AB 13 A1 76 87 CB B6 AE 5D D9 37 62 C7	//Token0_VerifyE5
+	6B 43 52 6D 74 5A 6B 6A 43 64 68 54 54 63 68 4D	//Key1_VerifyE5
+	00 78	//Token1_VerifyE5 Size
 	00 01 4D 39 31 E5 00 70 6B 9A 65 FA 07 09 C5 FF
 	D0 BB 97 E0 99 9D 46 60 3F FA 8F FF D4 CF 48 B0
 	52 D0 34 EB 07 A2 DC 80 8C 56 7A 01 16 45 35 D2
@@ -1273,28 +1272,28 @@ Decrypted:
 	CF D8 28 AE 6C 7E EC 30 27 5F F8 0C A7 77 61 62
 	AC 31 79 D7 43 9E 15 11 C8 CC 08 03 5B F6 ED 70
 	A9 20 22 F3 5E 7B 03 E5 CF 61 05 67 A5 D6 A9 D1
-	2C C6 57 B4 19 5E 37 E8;Token1_VerifyE5
-	00 00 0D A3	;Version Depended
-	00 01	;Fixed
-	51 80 00 00 00 3C 00 02;Fixed
-	00 73	;Size of TIME + Token2_VerifyE5
-	01	;Fixed
-	4A 74 63 36 56 66 4D 39 52 6D 6A 32 70 46 5A 39	;Key Unknown
-	00 60 00 01	;Fixed
-	4D 39 31 E5	;time32_t
-	00 58	;Token2_VerifyE5 Size
+	2C C6 57 B4 19 5E 37 E8//Token1_VerifyE5
+	00 00 0D A3	//Version Depended
+	00 01	//Fixed
+	51 80 00 00 00 3C 00 02//Fixed
+	00 73	//Size of TIME + Token2_VerifyE5
+	01	//Fixed
+	4A 74 63 36 56 66 4D 39 52 6D 6A 32 70 46 5A 39	//Key Unknown
+	00 60 00 01	//Fixed
+	4D 39 31 E5	//time32_t
+	00 58	//Token2_VerifyE5 Size
 	88 D5 2F 1C FD 92 56 9C 1F 49 3D F5 5B BC 09 A0
 	49 8C 9B E8 B6 7F 71 C4 57 97 C1 49 98 8A A3 38
 	A8 28 B3 ED 91 3A 27 F5 E2 24 45 9E 3F 72 3A 6F
 	DA D2 3F 2C F0 CA 27 D4 A3 C5 D6 26 A3 9C DC 1D
 	FF FE 8B BF 96 99 38 DE 10 B9 69 1D 5A F9 32 87
-	7A CF ED 3D 86 E1 BE 74;Token2_VerifyE5
-	00 00	;Fixed
+	7A CF ED 3D 86 E1 BE 74//Token2_VerifyE5
+	00 00	//Fixed
 }}}
 
 -----------------------------------------------------------------------
 
-== 5, VeryfyE3  0xE3 ==
+== 5, VeryfyE3----0xE3 ==
 
 	=== Client:	===
 
@@ -1322,12 +1321,12 @@ C5 A9 50 17 2B 9D 1C 0F 4E E8 74 1C 39 46 3D 14
 99 09 1E 64 7C 22 AD 8E 03
 	
 Header:	02 1E 0D 00 E3 71 7F 3D 0A 16 21 02 00 00 00 01
-	01 01 00 00 64 1F	;Refer above
-Body:	00 38	;Token2_Auth Size
+	01 01 00 00 64 1F	//Refer above
+Body:	00 38	//Token2_Auth Size
 	85 6D EE C7 38 A6 60 BC 5B 13 C9 BC B3 C5 27 7B
 	95 CE 05 26 E4 5F A8 A7 29 0A 7F FD A3 C9 E6 FD
 	9E 47 A0 20 CF 66 19 DD 56 37 26 C9 E8 C9 F9 01
-	AE BF BE 41 0E C1 47 6F;Token2_Auth
+	AE BF BE 41 0E C1 47 6F//Token2_Auth
 	9C A6 1B 67 63 1F 5C FD 43 0B A2 00 92 EA 99 39
 	19 60 16 91 5F 1F B3 D4 B4 84 87 99 B6 F0 7B FA
 	FC DA FE 5D E3 37 6C AC 68 1A 74 8C 4D 9E 37 4A
@@ -1343,20 +1342,20 @@ Body:	00 38	;Token2_Auth Size
 	8A 45 2D 54 31 7B 2E 56 7A FA E5 31 FA E6 86 F5
 	0D 18 57 BE 0A 8A 0F 3E 64 F6 40 41 12 B5 94 B0
 	8C 8E 02 87 FB 89 10 BD 23 2B A6 5D A8 A8 18 AD
-	99 09 1E 64 7C 22 AD 8E;TEA Enctyped, Key is Key2_Auth
+	99 09 1E 64 7C 22 AD 8E//TEA Enctyped, Key is Key2_Auth
 Tail:	03 
 	
 Decrypted:
-	00 C8 00 01	;Fixed
-	00 00 04 09 01 E0	;
-	00 00 04 09 01 E0	;Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	;Data2 Version Depended
-	00 38	;Token_Captcha Size
+	00 C8 00 01	//Fixed
+	00 00 04 09 01 E0	//
+	00 00 04 09 01 E0	//Data1 Version Depended
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 38	//Token_Captcha Size
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
 	C3 DA 40 94 9A 50 C4 B0 14 52 3D 47 DC 5B 77 6F
 	DA CC B3 D1 50 3B A4 9B 19 32 D8 29 7A 59 1A 05
-	AC 6E A0 90 DC 72 BF 3D;Token_Captcha
-	00 78	;Token1_VerifyE5 Size
+	AC 6E A0 90 DC 72 BF 3D//Token_Captcha
+	00 78	//Token1_VerifyE5 Size
 	00 01 4D 39 31 E5 00 70 6B 9A 65 FA 07 09 C5 FF
 	D0 BB 97 E0 99 9D 46 60 3F FA 8F FF D4 CF 48 B0
 	52 D0 34 EB 07 A2 DC 80 8C 56 7A 01 16 45 35 D2
@@ -1364,11 +1363,11 @@ Decrypted:
 	CF D8 28 AE 6C 7E EC 30 27 5F F8 0C A7 77 61 62
 	AC 31 79 D7 43 9E 15 11 C8 CC 08 03 5B F6 ED 70
 	A9 20 22 F3 5E 7B 03 E5 CF 61 05 67 A5 D6 A9 D1
-	2C C6 57 B4 19 5E 37 E8;Token1_VerifyE5
-	00 00	;Fixed Fill
-	00 20	;Size of Zero-Fill
+	2C C6 57 B4 19 5E 37 E8//Token1_VerifyE5
+	00 00	//Fixed Fill
+	00 20	//Size of Zero-Fill
 	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00;32bytes Zero-Fill
+	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00//32bytes Zero-Fill
 }}}
 
 -----------------------------------------------------------------------
@@ -1381,18 +1380,18 @@ Decrypted:
 0F 83 20 6E 53 DB 3E F8 86 3B C3 96 8C C1 54 2A
 08 42 16 71 58 60 03
 
-Header:	02 1E 0D 00 E3 71 7F 3D 0A 16 21 00 00 00	;Refer above
+Header:	02 1E 0D 00 E3 71 7F 3D 0A 16 21 00 00 00	//Refer above
 Body:	B1 94 9A 7A F3 BC 58 3B 40 F8 53 03 B2 51
 	D5 AE 47 62 0F 83 20 6E 53 DB 3E F8 86 3B
-	C3 96 8C C1 54 2A 08 42 16 71 58 60	;TEA Encypted, Key is Key1_VerifyE5
+	C3 96 8C C1 54 2A 08 42 16 71 58 60	//TEA Encypted, Key is Key1_VerifyE5
 Tail:	03
 	
 Decrypted:
-	00 15 00 00 0C 01 32	;QQ Number Depended
-	04	;Size of QQ Username below
-	56 59 53 45	;QQ Username UTF8
-	01	;Result
-	03 80 02 00 00 04 00 00 00 00 00 00	;Fixed, Unknown
+	00 15 00 00 0C 01 32	//QQ Number Depended
+	04	//Size of QQ Username below
+	56 59 53 45	//QQ Username UTF8
+	01	//Result
+	03 80 02 00 00 04 00 00 00 00 00 00	//Fixed, Unknown
 }}}
 
 -----------------------------------------------------------------------
@@ -1457,12 +1456,12 @@ F7 E0 0A 59 A1 A0 14 A6 FE DA 88 27 2C 36 10 57
 03
 
 Header:	02 1E 0D 00 30 29 3C 3D 0A 16 21 02 00 00 00 01
-	01 01 00 00 64 1F	;Refer above
-Body:	00 38	;Token2_Auth Size
+	01 01 00 00 64 1F	//Refer above
+Body:	00 38	//Token2_Auth Size
 	85 6D EE C7 38 A6 60 BC 5B 13 C9 BC B3 C5 27 7B
 	95 CE 05 26 E4 5F A8 A7 29 0A 7F FD A3 C9 E6 FD
 	9E 47 A0 20 CF 66 19 DD 56 37 26 C9 E8 C9 F9 01
-	AE BF BE 41 0E C1 47 6F	;Token2_Auth
+	AE BF BE 41 0E C1 47 6F	//Token2_Auth
 	D3 17 B6 B5 F7 F0 3E 80 76 C0 44 2F 79 74 D1 BE
 	00 34 AE 5E 52 3E 59 64 61 A8 8F BF 18 77 B5 AC
 	04 94 C0 EF 89 08 85 AC 48 74 DE E1 A9 40 A1 17
@@ -1509,17 +1508,17 @@ Body:	00 38	;Token2_Auth Size
 	EC 9D 3E 49 A9 54 EB 96 83 E2 70 A8 28 F2 D6 18
 	70 FF B3 E6 52 61 5F 42 CF E2 CB BE 4E E2 51 F4
 	45 19 03 AB 52 CA DA CC A6 5E 0B 84 DD C6 FE 4E
-	F7 E0 0A 59 A1 A0 14 A6 FE DA 88 27 2C 36 10 57	;TEA Encrypted, Key is Key2_Auth
+	F7 E0 0A 59 A1 A0 14 A6 FE DA 88 27 2C 36 10 57	//TEA Encrypted, Key is Key2_Auth
 Tail:	03
 
 Decrypted:
-	00 01	;Fixed
-	00 00 03 30 00 00 00 01 00 00 0B C5	;Data2 Version Depended
-	00 E4 00 03	;Unknown in VerifyE5 Response Packet
-	4D 39 31 E5	;Login Time, Received in Auth Response Packet
-	72 65 B6 96	;IP, Received in Touch Response
-	00 00 00 00 00 00 00 00	;8bytes Fill
-	00 D0	;Token0_VerifyE5 Size
+	00 01	//Fixed
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 E4 00 03	//Unknown in VerifyE5 Response Packet
+	4D 39 31 E5	//Login Time, Received in Auth Response Packet
+	72 65 B6 96	//IP, Received in Touch Response
+	00 00 00 00 00 00 00 00	//8bytes Fill
+	00 D0	//Token0_VerifyE5 Size
 	B6 DB 1B 29 2E D5 DA 1E 00 72 C0 12 E3 AE 2A 2E
 	03 57 15 00 73 39 D4 A2 0D 16 EC 6E DB 7B 9F E0
 	76 EE 4B 2D A1 64 D9 14 40 F2 65 C7 23 A6 F6 5C
@@ -1532,31 +1531,31 @@ Decrypted:
 	AE 91 A9 29 84 69 4B 29 F0 3C C3 F7 BB F7 E9 AC
 	FA 6C D0 CC 54 83 85 E6 AC 99 E9 27 8E B5 4E 15
 	70 29 98 0C C5 32 4D 3C F6 2C 4E 96 74 54 51 01
-	87 8A AE AB 13 A1 76 87 CB B6 AE 5D D9 37 62 C7	;Token0_VerifyE5
+	87 8A AE AB 13 A1 76 87 CB B6 AE 5D D9 37 62 C7	//Token0_VerifyE5
 	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-	00 00 00	;35bytes Zero-Fill
-	A9 07 23 4B EB 3A 68 EA 66 9A 0D EB 79 3E EF 70	;Version Depended
-	CC	;Unknown Random, CC is OK
-	28	;Login Mode, 0A Normal, 28 Invible
+	00 00 00	//35bytes Zero-Fill
+	A9 07 23 4B EB 3A 68 EA 66 9A 0D EB 79 3E EF 70	//Version Depended
+	CC	//Unknown Random, CC is OK
+	28	//Login Mode, 0A Normal, 28 Invible
 	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-	00 00 00 00 00 00 00 00 00	;25bytes Zero-Fill
-	00 00 04 09 01 E0	;Data1 Version Depended	
-	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00;16bytes Zero-Fill
-	00 38	;Token_Captcha Size
+	00 00 00 00 00 00 00 00 00	//25bytes Zero-Fill
+	00 00 04 09 01 E0	//Data1 Version Depended	
+	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00//16bytes Zero-Fill
+	00 38	//Token_Captcha Size
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
 	C3 DA 40 94 9A 50 C4 B0 14 52 3D 47 DC 5B 77 6F
 	DA CC B3 D1 50 3B A4 9B 19 32 D8 29 7A 59 1A 05
-	AC 6E A0 90 DC 72 BF 3D;Token_Captcha
+	AC 6E A0 90 DC 72 BF 3D//Token_Captcha
 	00 00 00 08 00 00 00 00 08 04 10 00 01 40 01 BC
 	A7 5E 24 00 10 14 82 79 84 1A 79 D0 D4 FD 11 26
-	38 39 EC F6 39	;Unknown, Version Depended
+	38 39 EC F6 39	//Unknown, Version Depended
 	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-	00 00 00 00 00 00 00 00 00	;25bytes Zero-Fill
-	02 AD 98 B7 D2	;Unknown, Version Depended
-	00 10	;Size of Data below
-	7E D6 F3 98 B1 03 E9 C8 96 32 72 4F 7E 2E 7B D0;Unknown, Version Depended
-	00 00 ... 00	;249bytes Zero-Fill
+	00 00 00 00 00 00 00 00 00	//25bytes Zero-Fill
+	02 AD 98 B7 D2	//Unknown, Version Depended
+	00 10	//Size of Data below
+	7E D6 F3 98 B1 03 E9 C8 96 32 72 4F 7E 2E 7B D0//Unknown, Version Depended
+	00 00 ... 00	//249bytes Zero-Fill
 }}}
 
 -----------------------------------------------------------------------
@@ -1576,7 +1575,7 @@ D7 12 8D 58 0E EE 62 15 21 E2 89 21 D9 30 54 2D
 06 F6 38 6C FB 76 6B D6 A3 F5 4D 8A 93 A7 97 68
 61 80 52 F4 98 2C 03
 
-Header:	02 1E 0D 00 30 29 3C 3D 0A 16 21 00 00 00	;Refer above
+Header:	02 1E 0D 00 30 29 3C 3D 0A 16 21 00 00 00	//Refer above
 Body:	9B 29 19 AE 9E B9 D6 07 44 55 12 0C 9A E0 04 2C 
 	2C CA 3C 3F 20 D8 9A FF 92 3A 56 BD 33 2D 3B 99 
 	F2 BE 79 21 09 7F 14 0E BC 98 8B E3 46 43 7B 42 
@@ -1586,26 +1585,26 @@ Body:	9B 29 19 AE 9E B9 D6 07 44 55 12 0C 9A E0 04 2C
 	0D 8D D7 12 8D 58 0E EE 62 15 21 E2 89 21 D9 30 
 	54 2D 2A D7 8A 69 4D 3F 03 CD 96 09 4E 72 04 44 
 	A6 37 06 F6 38 6C FB 76 6B D6 A3 F5 4D 8A 93 A7 
-	97 68 61 80 52 F4 98 2C	;TEA Encypted, Key is Key0_VerifyE5, Sometimes Key2_Auth
+	97 68 61 80 52 F4 98 2C	//TEA Encypted, Key is Key0_VerifyE5, Sometimes Key2_Auth
 Tail:	03
 
 Decypted:
-	00	;Flag Login Successful
-	6D 68 7A 4E 61 46 57 5A 32 70 54 6B 63 50 6D 76	;Session Key
-	3D 0A 16 21	;QQ Number
-	72 65 B6 96	;IP
-	12 A0;Port
-	4D 39 31 E6	;Login Time
-	00 00 00 00	;Local IP
+	00	//Flag Login Successful
+	6D 68 7A 4E 61 46 57 5A 32 70 54 6B 63 50 6D 76	//Session Key
+	3D 0A 16 21	//QQ Number
+	72 65 B6 96	//IP
+	12 A0//Port
+	4D 39 31 E6	//Login Time
+	00 00 00 00	//Local IP
 	03 14 8F FE 4F BB B6 63 C7 69 C3 F1 3C DC A1 E8
 	76 A3 CD 17 C0 00 08 02 04 08 08 08 08 08 04 05
-	01 F4 03 E8 07 D0 0B B8 13 88	;Fixed
-	00 30	;Token_Login Size
+	01 F4 03 E8 07 D0 0B B8 13 88	//Fixed
+	00 30	//Token_Login Size
 	1C 91 04 37 6E A0 63 45 8C F9 8C 98 DF 51 3A 52
 	85 C0 18 77 E2 3F 0F 13 66 46 A5 2E 91 4D 9B BA
-	2E 1A 00 5C CA 01 33 17 E7 7B CC FD F3 5E 85 3D	;Token_Login
-	70 5A 8A D7 70 5A 8A D8	;Unknown
-	00 00 00 07	;Fixed
+	2E 1A 00 5C CA 01 33 17 E7 7B CC FD F3 5E 85 3D	//Token_Login
+	70 5A 8A D7 70 5A 8A D8	//Unknown
+	00 00 00 07	//Fixed
 }}}
 
 -----------------------------------------------------------------------
@@ -1631,7 +1630,7 @@ Server:	01 00 03 01 42 02 00 80 00 00 10 46 D1 2E B0 93
 	=== 0xEB: ===
 {{{
 Client:	01 00 00 00 
-	0F 4D 2F 1A FE	;QQ Num Depended, Could be Fixed
+	0F 4D 2F 1A FE	//QQ Num Depended, Could be Fixed
 	00 01
 Server:	01 01
 }}}
@@ -1646,7 +1645,7 @@ Server:	01 00 00 0A
 {{{
 Client:	01
 Server:	01 00
-	00 28	;Size
+	00 28	//Size
 	28 D8 A7 48 CB 69 8F EF 94 A7 AC 4D B6 DB 80 E3
 	86 55 54 68 BB 4E 7C 85 F2 D2 A1 4A 2A D9 C1 CC
 	FC 8A 23 E6 C6 DD E2 48 
