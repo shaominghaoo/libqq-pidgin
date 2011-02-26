@@ -1,4 +1,6 @@
 #labels Build,Compile
+For Gentoo users, see [GentooBuild]
+
 First you need a Pidgin or LibPurple building environment.
 
 See Instructions in Links below:
