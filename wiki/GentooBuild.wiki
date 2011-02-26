@@ -20,6 +20,7 @@ append
 PORTDIR_OVERLAY="
 $PORTDIR_OVERLAY
 /var/lib/microcaioverlay
-"}}}
+"
+}}}
 
 Then` USE="-qq" emerge pidgin-qq2010 -av `
