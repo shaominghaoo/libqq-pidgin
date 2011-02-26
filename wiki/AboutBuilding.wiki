@@ -5,4 +5,23 @@ See Instructions in Links below:
 [http://developer.pidgin.im/wiki/Installing%20Pidgin#Compiling]
 [http://developer.pidgin.im/wiki/BuildingWinPidgin]
 
-SVN checkout src and replace original \libpurple\protocols\qq in Pidgin source code.
+Then checkout svn code, run 
+{{{
+./autogen.sh
+}}}
+to auto generate configure script and Makefile.in
+
+Then , invoke
+{{{
+./configure CFLAGS="-g3 -O0"
+}}}
+
+*set `CFLAGS` when you want to debug ;)*
+
+if not errors report, run `make`
+
+if not errors report, switch to root and run `make install`
+
+Ubuntu users may want to invoke `sudo make install`
+
+Then start your pidgin and enjory ;)
