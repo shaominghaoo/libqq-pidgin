@@ -1,0 +1,25 @@
+#labels Featured,Build,Gentoo,Phase-Support
+#Build libqq-pidgin by emerge
+
+= Introduction =
+  This is a guide to build libqq-pidgin for pidgin in gentoo
+
+= Details =
+
+First , add microcai's overlay
+
+[https://github.com/microcai/myoverlay/]
+
+{{{
+git clone git://github.com/microcai/myoverlay.git /var/lib/microcaioverlay
+vim /etc/make.conf
+}}}
+
+append
+{{{
+PORTDIR_OVERLAY="
+$PORTDIR_OVERLAY
+/var/lib/microcaioverlay
+"}}}
+
+Then` USE="-qq" emerge pidgin-qq2010 -av `
