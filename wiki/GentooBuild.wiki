@@ -6,12 +6,12 @@
 
 = Details =
 
-First , add microcai's overlay
+First , add libqq-pidgin's overlay
 
-[https://github.com/microcai/myoverlay/]
+[http://libqq-pidgin.googlecode.com/svn/portage/]
 
 {{{
-git clone git://github.com/microcai/myoverlay.git /var/lib/microcaioverlay
+svn co http://libqq-pidgin.googlecode.com/svn/portage/ /var/lib/libqq-pidgin
 vim /etc/make.conf
 }}}
 
@@ -19,7 +19,7 @@ append
 {{{
 PORTDIR_OVERLAY="
 $PORTDIR_OVERLAY
-/var/lib/microcaioverlay
+/var/lib/libqq-pidgin
 "
 }}}
 
