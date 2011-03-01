@@ -23,7 +23,10 @@ $PORTDIR_OVERLAY
 "
 }}}
 
-==Then` USE="-qq" emerge pidgin-qq2010 -av `==
+== Then` USE="-qq" emerge pidgin-qq2010 -av ` ==
+
+
+---
 
 =2nd way, full pidgin rebuild, see here=
 
