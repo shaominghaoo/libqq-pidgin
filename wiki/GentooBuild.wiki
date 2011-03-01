@@ -2,11 +2,13 @@
 #Build libqq-pidgin by emerge
 
 = Introduction =
-  This is a guide to build libqq-pidgin for pidgin in gentoo
+  This is a guide to update qq protocol of pidgin in gentoo
 
-= Details =
+  There is two ways that you can do this.
 
-==First , add libqq-pidgin's overlay==
+= 1st way =
+
+== Add libqq-pidgin's overlay==
 
 [http://libqq-pidgin.googlecode.com/svn/portage/]
 
@@ -26,7 +28,7 @@ $PORTDIR_OVERLAY
 == Then` USE="-qq" emerge pidgin-qq2010 -av ` ==
 
 
----
+------
 
 =2nd way, full pidgin rebuild, see here=
 
