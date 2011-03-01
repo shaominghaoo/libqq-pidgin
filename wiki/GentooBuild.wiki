@@ -24,3 +24,16 @@ $PORTDIR_OVERLAY
 }}}
 
 Then` USE="-qq" emerge pidgin-qq2010 -av `
+
+==2nd way, full pidgin rebuild, see here==
+
+Add libqq-pidgin overlay as described above.
+
+Execute
+{{{
+USE=qq emerge pidgin-2.7.10-r69
+}}} 
+
+This will cause libqq-pidgin of r69 version replace pidgin's qq, then do a full rebuild of pidgin.
+
+Enjoin you self ;) 
