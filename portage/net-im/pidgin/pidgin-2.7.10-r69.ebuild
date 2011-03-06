@@ -4,6 +4,8 @@
 
 EAPI=2
 
+INSTALL_MASK="*.la"
+
 GENTOO_DEPEND_ON_PERL=no
 inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2 python autotools
 
