@@ -5,12 +5,12 @@
   This is a guide to update qq protocol of pidgin in gentoo
 
   There is two ways that you can do this.
-
-= 1st way =
-
-== Add libqq-pidgin's overlay==
+  
+= Overlay =   
 
 [http://libqq-pidgin.googlecode.com/svn/portage/]
+
+== Add libqq-pidgin's overlay==
 
 {{{
 svn co http://libqq-pidgin.googlecode.com/svn/portage/ /var/lib/libqq-pidgin
@@ -25,20 +25,26 @@ $PORTDIR_OVERLAY
 "
 }}}
 
-== Then` USE="-qq" emerge pidgin-qq2010 -av ` ==
 
+= 1st way =
+
+== ` USE="-qq" emerge pidgin-qq2010 -av ` ==
 
 ------
 
-=2nd way, full pidgin rebuild, see here=
-
-Add libqq-pidgin overlay as described above.
+= 2nd way, full pidgin rebuild, see here =
 
 Execute
 {{{
-USE=qq emerge pidgin-2.7.10-r69
+USE=qq emerge pidgin-2.7.10-r??
 }}} 
 
-This will cause libqq-pidgin of r69 version replace pidgin's qq, then do a full rebuild of pidgin.
+?? is the desired SVN revison number. Say, 83 , 
+
+{{{
+USE=qq emerge pidgin-2.7.10-r83 `
+}}}
+
+This will cause libqq-pidgin @ r83 version replace pidgin's qq, then do a full rebuild of pidgin.
 
 Enjoin you self ;) 
