@@ -139,11 +139,10 @@ src_prepare() {
 		einfo "Checking out qq 2010 protocol src from http://libqq-pidgin.googlecode.com at reversion (${PR})"
 		einfo "Please report qq related bugs to http://libqq-pidgin.googlecode.com instead of pidgin." 
 		svn co http://libqq-pidgin.googlecode.com/svn/trunk ${co_flag} qq
-		#The libqq-pidgin project is going to build it seperate from pidgin,
-		#We revert to original Makefiles
-		cd qq
-		svn up -r 26 Makefile.am Makefile.in
 		#apply patchs
+
+		# re-run automake to generate Makefile.in
+		eautomake
 	fi
 }
 
