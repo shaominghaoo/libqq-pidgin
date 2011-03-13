@@ -2,9 +2,11 @@
 #Build libqq-pidgin by emerge
 
 = Introduction =
-  This is a guide to update qq protocol of pidgin in gentoo
+This is a guide to use qq 2010 protocol in pidgin for gentoo based linux system.
 
-  There is two ways that you can do this.
+*In general, packages are trying to provide a stable version for daily usage. To support debug/development of libqq-pidgin, please check [AboutBuilding] for details.*
+
+There is two ways that you can do this.
   
 = Overlay =   
 
@@ -26,25 +28,37 @@ $PORTDIR_OVERLAY
 }}}
 
 
-= 1st way =
+= The first way =
 
-== ` USE="-qq" emerge pidgin-qq2010 -av ` ==
+emerge pidgin-qq2010, which just build the libqq.so with 2010 protocol and install it to the pidgin's lib loading path.
+
+{{{
+USE="-qq" emerge pidgin-qq2010 -av
+}}}
 
 ------
 
-= 2nd way, full pidgin rebuild, see here =
+= 2nd, Enhanced pidgin ebuild =
 
-Execute
+Enhanced pidgin ebuild will use libqq-pidgin source code from the _vanilla branch_(which tends to keep the files/folder layout as much as possible from the original qq folder in pidgin and tends to keep code stable.) to replace the old broken qq protocol source code.
+
+These ebuilds add a *`qq2010`* new USE by enable by default.
+
+Updated ebuilds are located at a commiter's personal overlay [https://github.com/cchalpha/GC-Overlay]
+
+Checkout and setup the overlay by the way similar to which already described above or just download the ebuild file to your local portage tree.
+
+Currently, just the r9999 reversion ebuild is provided, which uses the latest vanilla branch source code.
+
+To use it, firstly you need to unmask the keyword by
+
 {{{
-USE=qq emerge pidgin-2.7.10-r??
-}}} 
-
-?? is the desired SVN revison number. Say, 83 , 
-
-{{{
-USE=qq emerge pidgin-2.7.10-r83 `
+echo "net-im/pidgin **" >> /etc/portage/package.keywords
 }}}
 
-This will cause libqq-pidgin @ r83 version replace pidgin's qq, then do a full rebuild of pidgin.
+then emerge it, default USE should be good.
+{{{
+emerge -1avt =net-im/pidgin-2.7.11-r9999
+}}}
 
-Enjoin you self ;) 
+ebuilds which use vanilla_tags or source tarball with tags(which tend to be more stable) will be provided soon.
