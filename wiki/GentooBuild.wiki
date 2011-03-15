@@ -10,37 +10,27 @@ There is two ways that you can do this.
   
 = Overlay =   
 
-[http://libqq-pidgin.googlecode.com/svn/portage/]
-
-== Add libqq-pidgin's overlay==
-
-{{{
-svn co http://libqq-pidgin.googlecode.com/svn/portage/ /var/lib/libqq-pidgin
-vim /etc/make.conf
-}}}
-
-append
-{{{
-PORTDIR_OVERLAY="
-$PORTDIR_OVERLAY
-/var/lib/libqq-pidgin
-"
-}}}
-
+[http://libqq-pidgin.googlecode.com/svn/porta
 
 = The first way =
 
-emerge pidgin-qq2010, which just build the libqq.so with 2010 protocol and install it to the pidgin's lib loading path.
+emerge pidgin-qq, which just build the libqq.so with 2010 protocol and install it to the pidgin's lib loading path.
+
+Thanks for Havanna from gentoo-china-overlay project to merge our ebuild into gentoo-china. So gentoo based users can easily use layman and gentoo-china overlay to install pidgin-qq.
 
 {{{
-USE="-qq" emerge pidgin-qq2010 -av
+layman -a gentoo-china
+}}}
+
+{{{
+emerge -avt pidgin-qq
 }}}
 
 ------
 
 = 2nd, Enhanced pidgin ebuild =
 
-Enhanced pidgin ebuild will use libqq-pidgin source code from the _vanilla branch_(which tends to keep the files/folder layout as much as possible from the original qq folder in pidgin and tends to keep code stable.) to replace the old broken qq protocol source code.
+Enhanced pidgin ebuild will use libqq-pidgin source code from the _vanilla branch_(which tends to keep the files/folder layout as much as possible from the original qq folder in pidgin and tends to keep code stable) to replace the old broken qq protocol source code.
 
 These ebuilds add a *`qq2010`* new USE by enable by default.
 
