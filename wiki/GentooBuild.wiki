@@ -8,13 +8,7 @@ This is a guide to use qq 2010 protocol in pidgin for gentoo based linux system.
 
 There is two ways that you can do this.
   
-= Overlay =   
-
-[http://libqq-pidgin.googlecode.com/svn/portage]
-
 = The first way =
-
-emerge pidgin-qq, which just build the libqq.so with 2010 protocol and install it to the pidgin's lib loading path.
 
 Thanks for Havanna from gentoo-china-overlay project to merge our ebuild into gentoo-china. So gentoo based users can easily use layman and gentoo-china overlay to install pidgin-qq.
 
@@ -25,6 +19,8 @@ layman -a gentoo-china
 {{{
 emerge -avt pidgin-qq
 }}}
+
+emerge pidgin-qq, which just build the libqq.so with 2010 protocol and install it to the pidgin's lib loading path.
 
 ------
 
