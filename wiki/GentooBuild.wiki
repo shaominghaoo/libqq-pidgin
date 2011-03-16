@@ -10,7 +10,7 @@ There is two ways that you can do this.
   
 = Overlay =   
 
-[http://libqq-pidgin.googlecode.com/svn/porta
+[http://libqq-pidgin.googlecode.com/svn/portage]
 
 = The first way =
 
