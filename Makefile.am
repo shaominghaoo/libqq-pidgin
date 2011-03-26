@@ -1,18 +1,7 @@
-AUTOMAKE_OPTIONS = foreign 1.6
-ACLOCAL_AMFLAGS = -I m4
-EXTRA_DIST = libpurple \
+EXTRA_DIST = \
 	Makefile.mingw
 
-
-
-# If build out side pidgin source, pluginsdir will be set to @PURPLE_PLUGINDIR@
-# If build in side pidgin source, pluginsdir will be empty, with is what it should be
-# Then empty pluginsdir will be set to $(libdir)/purple-$(PURPLE_MAJOR_VERSION)
-# So this fits both situation
-
-pluginsdir ?= $(libdir)/purple-@PURPLE_MAJOR_VERSION@
-
-pkgdir = ${pluginsdir}
+pkgdir = $(libdir)/purple-$(PURPLE_MAJOR_VERSION)
 
 QQSOURCES = \
 	buddy_info.c \
@@ -62,7 +51,9 @@ QQSOURCES = \
 	utils.c \
 	utils.h
 
-libqq_la_LDFLAGS = -module -avoid-version --no-la-files
+AM_CFLAGS = $(st)
+
+libqq_la_LDFLAGS = -module -avoid-version
 
 if STATIC_QQ
 
@@ -73,7 +64,7 @@ libqq_la_CFLAGS    = $(AM_CFLAGS)
 
 else
 
-st = -DPURPLE_PLUGINS
+st =
 noinst_LTLIBRARIES =
 pkg_LTLIBRARIES  = libqq.la
 libqq_la_SOURCES = $(QQSOURCES)
@@ -91,22 +82,9 @@ libqq_tmp_la_LIBADD = $(libqq_la_LIBADD)
 # places for users to choose from when setting their buddy icon.  We
 # don't distribute those icons ourselves because of possibly copyright
 # concerns, but distributions might want to put icons here.
-
-AM_CPPFLAGS= \
+AM_CPPFLAGS = \
+	-I$(top_srcdir)/libpurple \
+	-I$(top_builddir)/libpurple \
 	-DQQ_BUDDY_ICON_DIR=\"$(datadir)/pixmaps/purple/buddy_icons/qq\" \
 	$(DEBUG_CFLAGS) \
-	$(GLIB_CFLAGS) 
-
-
-# If build out side pidgin source, PURPLE_CFLAGS will be set properly 
-# If build in side pidgin source, PURPLE_CFLAGS will be empty, with is what it should be
-# So this fits both situation
-
-AM_CPPFLAGS += ${PURPLE_CFLAGS}  \
-	${st}	\
-	-I$(top_srcdir)/libpurple \
-	-I$(top_builddir)/libpurple 
-
-# remove .la files, DESTDIR is here for make install DESTDIR=somedir
-install-data-hook:
-	rm -f ${DESTDIR}$(pluginsdir)/libqq.la
+	$(GLIB_CFLAGS)
