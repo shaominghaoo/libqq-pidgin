@@ -41,9 +41,14 @@ TEA Decode Result:
 	00 00 0B C5 00 00 00 00 00 00 00 00 00 00 00 00
 	00 00 00
 
-	00 01	//Fixed
-	00 00 04 09 01 E0	//Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 01	//wSubVer
+	00 00 04 09	//dwLocaleID
+	01 E0	//wTimeZoneOffsetMin
+	//Data1
+	00 00 03 30	//dwSSOVersion, Protocol Version!
+	00 00 00 01	//dwAppID
+	00 00 0B C5	//dwAppClientVer
+	//Data2
  	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00	//15bytes Zero at Touch #1
 }}}
 
@@ -127,8 +132,8 @@ TEA Decode Result:
 	00 00 0B C5 00 00 00 00 00 00 00 00 00 00 00 00
 	00 00 00
 	00 01	//Fixed
-	00 00 04 09 01 E0	//Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 00 04 09 01 E0	//Data1
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
  	00 01 01 00 00 00 09 00 00 00 00 FF FF FF FF	
 	//15bytes, Start with 00, Else Same as Requested
 	//01 //Redirection Needed
@@ -219,8 +224,8 @@ TEA Value Decrypted:
 	05 00 00 00 00 00 00 00
 
 	00 01	//Fixed
-	00 00 04 09 01 E0	//Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 00 04 09 01 E0	//Data1
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Touch Size
 	FF AC 0A 86 BB CD 39 0B D7 7D C2 F2 19 1E C1 BA
 	1D 75 54 8E 2E F8 F7 64 BF F8 C8 6F B9 79 66 6D
@@ -538,8 +543,8 @@ TEA Value Decrypted:
 	1D E7 43 D2 E7 CB 91 3F AA 29 9B 23 FF 05 A7 8A 
 
 	00 01	//Fixed
-	00 00 04 09 01 E0	//Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 00 04 09 01 E0	//Data1
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Touch Size
 	0D 20 24 82 C6 29 01 30 B1 3A 37 45 C1 D7 C4 AE 
 	A4 83 38 EC 83 4F DB 68 BE A2 3E F3 F6 39 0E 81 
@@ -713,8 +718,8 @@ Decrypted:
 	08 E5 07 BA 57
  
 	00 01	//Fixed
-	00 00 04 09 01 E0	//Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 00 04 09 01 E0	//Data1
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Touch Size
 	F3 3C 2E 17 61 5F EE 48 3A A8 06 CB 82 D5 E6 A0 
 	9B 4C 80 C7 7E DB 16 4C 09 AA FA 39 D3 69 C4 00 
@@ -901,8 +906,8 @@ TEA Value Decrypted:
 	00 00 00 00 00 00 00 00 00	//601bytes
 
 	00 DE 00 01	//Fixed
-	00 00 04 09 01 E0	//Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 00 04 09 01 E0	//Data1
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Capcha Size
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
 	C3 DA 40 94 9A 50 C4 B0 14 52 3D 47 DC 5B 77 6F
@@ -1136,8 +1141,8 @@ Tail:	03
 
 Decrypted Value:
 	01 0E 00 01 01	//Fixed
-	00 00 04 09 01 E0	//Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 00 04 09 01 E0	//Data1
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Captcha Size	
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
 	C3 DA 40 94 9A 50 C4 B0 14 52 3D 47 DC 5B 77 6F
@@ -1348,8 +1353,8 @@ Tail:	03
 Decrypted:
 	00 C8 00 01	//Fixed
 	00 00 04 09 01 E0	//
-	00 00 04 09 01 E0	//Data1 Version Depended
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 00 04 09 01 E0	//Data1
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Captcha Size
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
 	C3 DA 40 94 9A 50 C4 B0 14 52 3D 47 DC 5B 77 6F
@@ -1513,7 +1518,7 @@ Tail:	03
 
 Decrypted:
 	00 01	//Fixed
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 Version Depended
+	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
 	00 E4 00 03	//Unknown in VerifyE5 Response Packet
 	4D 39 31 E5	//Login Time, Received in Auth Response Packet
 	72 65 B6 96	//IP, Received in Touch Response
@@ -1540,7 +1545,7 @@ Decrypted:
 	28	//Login Mode, 0A Normal, 28 Invible
 	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 	00 00 00 00 00 00 00 00 00	//25bytes Zero-Fill
-	00 00 04 09 01 E0	//Data1 Version Depended	
+	00 00 04 09 01 E0	//Data1	
 	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00//16bytes Zero-Fill
 	00 38	//Token_Captcha Size
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
