@@ -939,10 +939,10 @@ Authentication Data Decypted:
 	00 01	//Fixed
 	3D 0A 16 21	//QQ Number
 	00 00 03 20 00 00 00 01 00 00 0B C5	//Data2 in TOUCH Header
-	00 00 01	//Fixed
+	00 00 00	//IF Clean Login, All Zero 
 	FA B6 A8 C8 5F C8 2A 66 1D B6 29 E5 D8 6E BE E9	//QQ MD5(Password)
-	4D 34 57 33	//time32_t, Last Login Time, Just Set Time Now
-	00 00 00 00 00 00 00 00 00 00 00 00 00	//13bytes Fixed
+	4D 34 57 33	//time32_t, Last Login Time,IF Clean Login,is Now
+	00 00 00 00 00 00 00 00 00 00 00 00 00	//13bytes Zero IF Clean Login
 	72 65 B0 6A	//ip
 	00 00 00 00 00 00 00 00//8bytes Fixed
 	00 10	//Size of Key below
