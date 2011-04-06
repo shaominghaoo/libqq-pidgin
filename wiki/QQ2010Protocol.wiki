@@ -37,7 +37,7 @@ Body:	5C 6E 23 B6 95 1E 43 08 CC 35 0A CE 6C C2 5E 25	//128bit Key of TEA
 Tail:	03	//Protocol End Flag
 
 TEA Decode Result:
-	00 01 00 00 04 09 01 E0 00 00 03 30 00 00 00 01
+	00 01 00 00 04 09 01 E0 00 00 03 20 00 00 00 01
 	00 00 0B C5 00 00 00 00 00 00 00 00 00 00 00 00
 	00 00 00
 
@@ -45,7 +45,7 @@ TEA Decode Result:
 	00 00 04 09	//dwLocaleID
 	01 E0	//wTimeZoneOffsetMin
 	//Data1
-	00 00 03 30	//dwSSOVersion, Protocol Version!
+	00 00 03 20	//dwSSOVersion, Protocol Version!
 	00 00 00 01	//dwAppID
 	00 00 0B C5	//dwAppClientVer
 	//Data2
@@ -128,12 +128,12 @@ Body:	73 41 D9 BD FD A5 E0 47 BE 82 27 16 A1 27 92 11	//128bit Key of TEA
 Tail:	03	//Protocol End Flag
 		
 TEA Decode Result:
-	00 01 00 00 04 09 01 E0 00 00 03 30 00 00 00 01
+	00 01 00 00 04 09 01 E0 00 00 03 20 00 00 00 01
 	00 00 0B C5 00 00 00 00 00 00 00 00 00 00 00 00
 	00 00 00
 	00 01	//Fixed
 	00 00 04 09 01 E0	//Data1
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
+	00 00 03 20 00 00 00 01 00 00 0B C5	//Data2
  	00 01 01 00 00 00 09 00 00 00 00 FF FF FF FF	
 	//15bytes, Start with 00, Else Same as Requested
 	//01 //Redirection Needed
@@ -216,7 +216,7 @@ Body:	43 CE 3E 6C 54 72 09 1F 3F E5 54 97 0D 1D 07 AB	//TEA Key
 Tail:	03
 
 TEA Value Decrypted:
-	00 01 00 00 04 09 01 E0 00 00 03 30 00 00 00 01 
+	00 01 00 00 04 09 01 E0 00 00 03 20 00 00 00 01 
 	00 00 0B C5 00 38 FF AC 0A 86 BB CD 39 0B D7 7D 
 	C2 F2 19 1E C1 BA 1D 75 54 8E 2E F8 F7 64 BF F8 
 	C8 6F B9 79 66 6D DD 39 A0 4A 56 16 5B F6 D7 15 
@@ -225,7 +225,7 @@ TEA Value Decrypted:
 
 	00 01	//Fixed
 	00 00 04 09 01 E0	//Data1
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
+	00 00 03 20 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Touch Size
 	FF AC 0A 86 BB CD 39 0B D7 7D C2 F2 19 1E C1 BA
 	1D 75 54 8E 2E F8 F7 64 BF F8 C8 6F B9 79 66 6D
@@ -533,7 +533,7 @@ Body:	1F A1 0D A1 4F 36 1D 42 34 69 1D BB A6 C3 3F FF	//TEA Key
 Tail:	03
 
 TEA Value Decrypted:
-	00 01 00 00 04 09 01 E0 00 00 03 30 00 00 00 01 
+	00 01 00 00 04 09 01 E0 00 00 03 20 00 00 00 01 
 	00 00 0B C5 00 38 0D 20 24 82 C6 29 01 30 B1 3A 
 	37 45 C1 D7 C4 AE A4 83 38 EC 83 4F DB 68 BE A2 
 	3E F3 F6 39 0E 81 77 85 FB D7 98 AF A7 6A 97 E9 
@@ -544,7 +544,7 @@ TEA Value Decrypted:
 
 	00 01	//Fixed
 	00 00 04 09 01 E0	//Data1
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
+	00 00 03 20 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Touch Size
 	0D 20 24 82 C6 29 01 30 B1 3A 37 45 C1 D7 C4 AE 
 	A4 83 38 EC 83 4F DB 68 BE A2 3E F3 F6 39 0E 81 
@@ -707,7 +707,7 @@ Body:	34 32 09 43 C2 6C EF 16 FC E6 46 04 9F FB 4A 64	//TEA Key
 Tail:	03
 
 Decrypted:
-	00 01 00 00 04 09 01 E0 00 00 03 30 00 00 00 01 
+	00 01 00 00 04 09 01 E0 00 00 03 20 00 00 00 01 
 	00 00 0B C5 00 38 F3 3C 2E 17 61 5F EE 48 3A A8 
 	06 CB 82 D5 E6 A0 9B 4C 80 C7 7E DB 16 4C 09 AA 
 	FA 39 D3 69 C4 00 F0 59 4A A1 2F 7E 4B 2E 90 23 
@@ -719,7 +719,7 @@ Decrypted:
  
 	00 01	//Fixed
 	00 00 04 09 01 E0	//Data1
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
+	00 00 03 20 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Touch Size
 	F3 3C 2E 17 61 5F EE 48 3A A8 06 CB 82 D5 E6 A0 
 	9B 4C 80 C7 7E DB 16 4C 09 AA FA 39 D3 69 C4 00 
@@ -866,7 +866,7 @@ Body:	17 B1 11 99 74 3A D6 6B DD A4 E9 80 F6 95 A6 D4 //TEA Key
 Tail:	03
 
 TEA Value Decrypted:
-	00 DE 00 01 00 00 04 09 01 E0 00 00 03 30 00 00 
+	00 DE 00 01 00 00 04 09 01 E0 00 00 03 20 00 00 
 	00 01 00 00 0B C5 00 38 C3 B1 A9 05 76 D6 16 36 
 	5E 7A 9D D9 56 4E AF 53 C3 DA 40 94 9A 50 C4 B0 
 	14 52 3D 47 DC 5B 77 6F DA CC B3 D1 50 3B A4 9B 
@@ -907,7 +907,7 @@ TEA Value Decrypted:
 
 	00 DE 00 01	//Fixed
 	00 00 04 09 01 E0	//Data1
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
+	00 00 03 20 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Capcha Size
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
 	C3 DA 40 94 9A 50 C4 B0 14 52 3D 47 DC 5B 77 6F
@@ -938,7 +938,7 @@ Authentication Data Decypted:
 	1B 9B CC D9	//Unknown Random
 	00 01	//Fixed
 	3D 0A 16 21	//QQ Number
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2 in TOUCH Header
+	00 00 03 20 00 00 00 01 00 00 0B C5	//Data2 in TOUCH Header
 	00 00 01	//Fixed
 	FA B6 A8 C8 5F C8 2A 66 1D B6 29 E5 D8 6E BE E9	//QQ MD5(Password)
 	4D 34 57 33	//time32_t, Last Login Time, Just Set Time Now
@@ -1142,7 +1142,7 @@ Tail:	03
 Decrypted Value:
 	01 0E 00 01 01	//Fixed
 	00 00 04 09 01 E0	//Data1
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
+	00 00 03 20 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Captcha Size	
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
 	C3 DA 40 94 9A 50 C4 B0 14 52 3D 47 DC 5B 77 6F
@@ -1354,7 +1354,7 @@ Decrypted:
 	00 C8 00 01	//Fixed
 	00 00 04 09 01 E0	//
 	00 00 04 09 01 E0	//Data1
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
+	00 00 03 20 00 00 00 01 00 00 0B C5	//Data2
 	00 38	//Token_Captcha Size
 	C3 B1 A9 05 76 D6 16 36 5E 7A 9D D9 56 4E AF 53
 	C3 DA 40 94 9A 50 C4 B0 14 52 3D 47 DC 5B 77 6F
@@ -1518,7 +1518,7 @@ Tail:	03
 
 Decrypted:
 	00 01	//Fixed
-	00 00 03 30 00 00 00 01 00 00 0B C5	//Data2
+	00 00 03 20 00 00 00 01 00 00 0B C5	//Data2
 	00 E4 00 03	//Unknown in VerifyE5 Response Packet
 	4D 39 31 E5	//Login Time, Received in Auth Response Packet
 	72 65 B6 96	//IP, Received in Touch Response
