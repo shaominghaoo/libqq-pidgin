@@ -926,7 +926,7 @@ TEA Value Decrypted:
 	FB D4 9A 8C 63 7A D6 0C A5 B3 48 43 EB D2 D3 F9 
 	CD 8F AA 6B 	//Unknown Random Data
 	01 77 2E 01	//Version Depended
-	BC A7 5E 24	//Version Depended
+	BC A7 5E 24	//Unknown Random Data
 	00 10	//Size of Key0_Auth below
 	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3	//Key0_Auth, As the TEA Key to Decrypt Response TEA Value
 	02 AD 98 B7 D2	//Fixed
