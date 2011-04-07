@@ -649,7 +649,7 @@ void qq_update_all(PurpleConnection *gc, guint16 cmd)
 			qq_request_buddy_memo(gc, 0, QQ_CMD_CLASS_UPDATE_ALL, QQ_BUDDY_MEMO_ALIAS);
 			break;
 		case QQ_CMD_BUDDY_MEMO:
-			qq_request_get_buddies_level(gc, QQ_CMD_CLASS_UPDATE_ALL);
+			qq_request_get_buddies_level(gc, QQ_CMD_CLASS_UPDATE_ALL, 0);
 			break;
 		case QQ_CMD_GET_LEVEL:
 			qq_request_get_buddies_online(gc, 0, QQ_CMD_CLASS_UPDATE_ALL);
@@ -657,7 +657,7 @@ void qq_update_all(PurpleConnection *gc, guint16 cmd)
 		case QQ_CMD_GET_BUDDIES_ONLINE:
 			qq_request_get_buddies_sign(gc, QQ_CMD_CLASS_UPDATE_ALL, 0);
 			break;
-		case QQ_CMD_GET_BUDDY_SIGN:
+		case QQ_CMD_GET_BUDDIES_SIGN:
 			/* last command */
 			qq_update_all_rooms(gc, 0, 0);
 			break;
@@ -1091,9 +1091,14 @@ void qq_proc_client_cmds(PurpleConnection *gc, guint16 cmd, guint16 seq,
 			break;
 		case QQ_CMD_GET_LEVEL:
 			qq_process_get_level_reply(data, data_len, gc);
+			if (ship32)
+			{
+				purple_debug_info("QQ", "Requesting Buddy Level pos: %d\n", ship32);
+				qq_request_get_buddies_level(gc, 0, ship32);
+			}
 			break;
-		case QQ_CMD_GET_BUDDY_SIGN:
-			qq_process_get_buddy_sign(data, data_len, gc);
+		case QQ_CMD_GET_BUDDIES_SIGN:
+			qq_process_get_buddies_sign(data, data_len, gc);
 			if (ship32)
 			{
 				purple_debug_info("QQ", "Requesting Buddy Signature pos: %d\n", ship32);

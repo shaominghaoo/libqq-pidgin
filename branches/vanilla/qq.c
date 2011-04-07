@@ -57,7 +57,7 @@
 #include "utils.h"
 #include "version.h"
 
-#define LIBQQ_VERSION 		"0.67"
+#define LIBQQ_VERSION 		"0.68"
 
 static GList *server_list_build(gchar select)
 {
@@ -307,11 +307,12 @@ static void qq_tooltip_text(PurpleBuddy *b, PurpleNotifyUserInfo *user_info, gbo
 	gchar *moodtext;
 
 	g_return_if_fail(b != NULL);
-
 	presence = purple_buddy_get_presence(b);
 	bd = purple_buddy_get_protocol_data(b);
 	if (bd == NULL)
 		return;
+
+	qq_request_get_level(purple_account_get_connection(purple_buddy_get_account(b)), bd->uid);
 
 	/* if (PURPLE_BUDDY_IS_ONLINE(b) && bd != NULL) */
 	if (bd->ip.s_addr != 0) {
@@ -336,13 +337,8 @@ static void qq_tooltip_text(PurpleBuddy *b, PurpleNotifyUserInfo *user_info, gbo
 		case QQ_BUDDY_GENDER_MM:
 			purple_notify_user_info_add_pair(user_info, _("Gender"), _("Female"));
 			break;
-		case QQ_BUDDY_GENDER_UNKNOWN:
-			purple_notify_user_info_add_pair(user_info, _("Gender"), _("Unknown"));
-			break;
 		default:
-			tmp = g_strdup_printf("Error (%d)", bd->gender);
-			purple_notify_user_info_add_pair(user_info, _("Gender"), tmp);
-			g_free(tmp);
+			purple_notify_user_info_add_pair(user_info, _("Gender"), _("Unknown"));
 	}
 
 	if (bd->level) {
@@ -663,7 +659,7 @@ static void action_about_libqq(PurplePluginAction *action)
 	g_string_append(info, "ccpaging : maintainer since 2007<br>\n");
 	g_string_append(info, "icesky : maintainer since 2007<br>\n");
 	g_string_append(info, "csyfek : faces, maintainer since 2007<br>\n");
-	g_string_append(info, "V.E.O : maintainer since 2011, OpenQ rename to libqq<br>\n");
+	g_string_append(info, "V.E.O : maintainer since 2011, OpenQ rename to LibQQ<br>\n");
 	g_string_append(info, "<br>\n");
 
 	g_string_append(info, _("<p><b>Lovely Patch Writers</b>:<br>\n"));
@@ -702,7 +698,7 @@ static void action_about_libqq(PurplePluginAction *action)
 	g_string_append(info, _("<i>Feel free to join us!</i> :)"));
 	g_string_append(info, "</body></html>");
 
-	title = g_strdup_printf(_("About libqq %s"), LIBQQ_VERSION);
+	title = g_strdup_printf(_("About LibQQ %s"), LIBQQ_VERSION);
 	purple_notify_formatted(gc, title, title, NULL, info->str, NULL, NULL);
 
 	g_free(title);
@@ -866,7 +862,7 @@ static GList *qq_actions(PurplePlugin *plugin, gpointer context)
 	act = purple_plugin_action_new(_("Update all QQ Quns"), action_update_all_rooms);
 	m = g_list_append(m, act);
 
-	act = purple_plugin_action_new(_("About libqq"), action_about_libqq);
+	act = purple_plugin_action_new(_("About LibQQ"), action_about_libqq);
 	m = g_list_append(m, act);
 	/*
 	   act = purple_plugin_action_new(_("Qun: Search a permanent Qun"), _qq_menu_search_or_add_permanent_group);
