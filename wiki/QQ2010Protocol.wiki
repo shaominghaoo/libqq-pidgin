@@ -28,7 +28,7 @@ Header:	02	//Protocol Start Flag
 	1E 0D	//Client Version
 	00 91	//Cmd (Touch)
 	5B AB	//Seq Number
-	3D 0A 16 21	//QQ number (Little Endian)
+	3D 0A 16 21	//QQ number (Network Byte Order)
 	02 00 00 00 01 01 01 00 00 64 1F	//Unknown filling, 1F differs among versions
 Body:	5C 6E 23 B6 95 1E 43 08 CC 35 0A CE 6C C2 5E 25	//128bit Key of TEA
 	A0 3A 1A AC 54 20 4C 4D 02 88 BC D2 06 6B 17 6F 
@@ -119,7 +119,7 @@ Header:	02	//Protocol Start Flag
 	1E 0D	//Client Version
 	00 91	//Cmd (Touch)
 	5B AC	//Seq Number
-	3D 0A 16 21	//QQ number (Little Endian)
+	3D 0A 16 21	//QQ number (Network Byte Order)
 	02 00 00 00 01 01 01 00 00 64 1F	//Unknown filling, 1F differs among versions
 Body:	73 41 D9 BD FD A5 E0 47 BE 82 27 16 A1 27 92 11	//128bit Key of TEA
 	02 43 7F 62 A7 48 F6 97 D3 7A 48 85 CB 0E 6F 80 
