@@ -183,7 +183,7 @@ TEA Decoded Result:
 	1D 75 54 8E 2E F8 F7 64 BF F8 C8 6F B9 79 66 6D 
 	DD 39 A0 4A 56 16 5B F6 D7 15 FA 6C 92 4C 02 9F 
 	74 0B E9 9A 05 37 96 31		//56bytes Token
-	00	//Flag Touch Success or filling
+	00	//Flag Redirection needed
 }}}
 
 -----------------------------------------------------------------------
