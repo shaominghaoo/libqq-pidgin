@@ -501,8 +501,8 @@ Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha #1 (IF CAPTCHA NEEDED) ===
-	==== Server: ====
+	=== Captcha #1 REQUEST REMAINED CAPTCHA IMAGE(IF CAPTCHA NEEDED) ===
+	==== Client: ====
 
 {{{
 02 1E 0D 00 BA 54 06 1B 6F 70 E9 02 00 00 00 01
@@ -560,7 +560,7 @@ TEA Value Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha #2 (IF CAPTCHA NEEDED) ===
+	=== Captcha #2 RESPONSE REMAINED CAPTCHA IMAGE(IF CAPTCHA NEEDED) ===
 	==== Server: ====
 	
 {{{
@@ -675,7 +675,7 @@ Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha #3 (IF CAPTCHA NEEDED) ===
+	=== Captcha #3 SUBMIT CAPTCHA(IF CAPTCHA NEEDED) ===
 	==== Client: ====
 
 {{{
@@ -737,7 +737,7 @@ Decrypted:
 
 -----------------------------------------------------------------------
 
-	=== Captcha #3 (IF CAPTCHA NEEDED) ===
+	=== Captcha #3 RESPONSE(IF CAPTCHA NEEDED) ===
 	==== Server: ====
 	
 {{{
