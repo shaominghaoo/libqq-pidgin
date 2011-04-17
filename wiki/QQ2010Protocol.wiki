@@ -927,11 +927,11 @@ TEA Value Decrypted:
 	CD 8F AA 6B 	//Unknown Random Data
 	01 77 2E 01	//Version Depended
 	BC A7 5E 24	//Unknown Random Data
-	00 10	//Size of Key0_Auth below
-	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3	//Key0_Auth, As the TEA Key to Decrypt Response TEA Value, Random
+	00 10	//Size of Key below
+	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3	//Unknown Random Key
 	02 AD 98 B7 D2	//Fixed
-	00 10	//Size of Key1_Auth below
-	7E D6 F3 98 B1 03 E9 C8 96 32 72 4F 7E 2E 7B D0	//Key1_Auth, Unknown Random
+	00 10	//Size of Key below
+	7E D6 F3 98 B1 03 E9 C8 96 32 72 4F 7E 2E 7B D0	//Unknown Random Key
 	00 ... 00	//328bytes fill
 
 Authentication Data Decypted:
@@ -946,8 +946,8 @@ Authentication Data Decypted:
 	72 65 B0 6A	//ip
 	00 00 00 00 00 00 00 00//8bytes Fixed
 	00 10	//Size of Key below
-	31 84 FD 03 DB 59 5A 4A A6 71 1B 11 41 3A 87 91	//Unknown Random Key
-	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3	//Unknown Random Key	
+	31 84 FD 03 DB 59 5A 4A A6 71 1B 11 41 3A 87 91	//Key0_Auth, As the TEA Key to Decrypt Response TEA Value, Random
+	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3	//Key1_Auth, As the TEA Key to Decrypt Response TEA Value, Random
 }}}
 
 -----------------------------------------------------------------------
@@ -995,7 +995,7 @@ Body:	9F 04 56 0C 98 05 B6 CE 5C C5 47 68 6B 47 AE DF
 	71 C5 84 95 31 7E 4C 72 02 66 01 7E 9C 13 61 29 
 	CE 2A 62 E0 A0 C0 5C DF 33 7D BF DB 16 3F 19 42 
 	81 C6 3E 8D 24 B8 2E 7A CE 3B BD C3 8B 2F FA 59 
-	48 D0 C4 BA C2 66 0E 57	//TEA Encypted Value, Key is Key0_Auth in Requested Packet IF Authentication Successful or Key of Requested Body First 16bytes IF Authentication Fails 
+	48 D0 C4 BA C2 66 0E 57	//TEA Encypted Value, Key is Key1_Auth in Requested Packet IF Authentication Successful or Key of Requested Body First 16bytes IF Authentication Fails 
 Tail:	03
 
 TEA Decrypted Value:
