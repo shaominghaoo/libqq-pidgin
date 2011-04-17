@@ -1,4 +1,4 @@
-#labels QQ,protocol,Featured,Phase-Design
+#labels y,protocol,Featured,Phase-Design
 #QQ 2010 Protocol
 
 = Introduction =
@@ -923,15 +923,15 @@ TEA Value Decrypted:
 	A0 79 FD 85 3F 02 69 FD 32 3C 1D CF 42 1A 03 4F
 	0D 39 5F 92 61 B9 5F 1E	//Authentication Data
 	00 14	//Size of Data below
-	FB D4 9A 8C 63 7A D6 0C A5 B3 48 43 EB D2 D3 F9 
+	FB D4 9A 8C 63 7A D6 0C A5 B3 48 43 EB D2 D3 F9 //Unknown Random
 	CD 8F AA 6B 	//Unknown Random Data
 	01 77 2E 01	//Version Depended
 	BC A7 5E 24	//Unknown Random Data
 	00 10	//Size of Key0_Auth below
-	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3	//Key0_Auth, As the TEA Key to Decrypt Response TEA Value
+	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3	//Key0_Auth, As the TEA Key to Decrypt Response TEA Value, Random
 	02 AD 98 B7 D2	//Fixed
 	00 10	//Size of Key1_Auth below
-	7E D6 F3 98 B1 03 E9 C8 96 32 72 4F 7E 2E 7B D0	//Key1_Auth, Version Depended
+	7E D6 F3 98 B1 03 E9 C8 96 32 72 4F 7E 2E 7B D0	//Key1_Auth, Unknown Random
 	00 ... 00	//328bytes fill
 
 Authentication Data Decypted:
@@ -946,9 +946,8 @@ Authentication Data Decypted:
 	72 65 B0 6A	//ip
 	00 00 00 00 00 00 00 00//8bytes Fixed
 	00 10	//Size of Key below
-	31 84 FD 03 DB 59 5A 4A A6 71 1B 11 41 3A 87 91	//Key0, Version Depended
-	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3
-//Key0_Auth Same as above	
+	31 84 FD 03 DB 59 5A 4A A6 71 1B 11 41 3A 87 91	//Unknown Random Key
+	C5 F6 F7 EC 10 CB 98 E2 E2 75 77 F3 E7 06 28 F3	//Unknown Random Key	
 }}}
 
 -----------------------------------------------------------------------
