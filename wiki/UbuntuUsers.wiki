@@ -1,0 +1,8 @@
+#labels Featured,Phase-Support
+Ubuntu 用户有福了！
+
+我已经建立了一个 PPA 
+
+[https://launchpad.net/~microcai/+archive/forchina]
+
+这里及时的会有最新的包。
