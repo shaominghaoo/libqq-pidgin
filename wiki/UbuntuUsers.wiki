@@ -13,3 +13,6 @@ Ubuntu 用户有福了！
 [https://launchpad.net/~lainme/+archive/ppa]
 
 这位童鞋也有 ubuntu 的包。 :) 用哪个自己选择。
+
+
+安装了看不到 QQ 协议的童鞋请注意升级 pidgin 到 2.6.11 以上版本。
