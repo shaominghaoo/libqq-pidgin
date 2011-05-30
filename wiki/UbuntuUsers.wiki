@@ -20,4 +20,5 @@ Ubuntu 用户有福了！
 下面是 PPA 的安装方法
 
 sudo add-apt-repository ppa:microcai/forchina
+
 sudo apt-get install libqq-pidgin
