@@ -18,7 +18,7 @@ Ubuntu 用户有福了！
 安装了看不到 QQ 协议的童鞋请注意升级 pidgin 到 2.6.11 以上版本。
 
 下面是 PPA 的安装方法
-
+{{{
 sudo add-apt-repository ppa:microcai/forchina
-
 sudo apt-get install libqq-pidgin
+}}}
