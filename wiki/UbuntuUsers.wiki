@@ -1,24 +1,15 @@
 #labels Featured,Phase-Support
 Ubuntu 用户有福了！
 
-
-我已经建立了一个 PPA 
-
-[https://launchpad.net/~microcai/+archive/forchina]
-
-这里及时的会有最新的包。
-
-顺便提醒一下 
-
-[https://launchpad.net/~lainme/+archive/ppa]
-
-这位童鞋也有 ubuntu 的包。 :) 用哪个自己选择。
+lainme 同鞋搭建了专门的 PPA
 
 
-安装了看不到 QQ 协议的童鞋请注意升级 pidgin 到 2.6.11 以上版本。
+[https://launchpad.net/~lainme/+archive/libqq]
+
+此 PPA 还包括了最新的 pidgin , 值得试试
 
 下面是 PPA 的安装方法
 {{{
-sudo add-apt-repository ppa:microcai/forchina
+sudo add-apt-repository ppa:lainme/libqq
 sudo apt-get install libqq-pidgin
 }}}
