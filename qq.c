@@ -157,11 +157,11 @@ static void qq_login(PurpleAccount *account)
 	purple_debug_info("QQ", "Server list has %d\n", g_list_length(qd->servers));
 
 	version_str = purple_account_get_string(account, "client_version", NULL);
-	qd->client_tag = QQ_CLIENT_1E0D;	/* set default as QQ2010 */
+	qd->client_tag = QQ_CLIENT_2630;	/* set default as QQ2010 */
 	qd->client_version = 2010;
 	if (version_str != NULL && strlen(version_str) != 0) {
 		if (strcmp(version_str, "qq2010") == 0) {
-			qd->client_tag = QQ_CLIENT_1E0D;
+			qd->client_tag = QQ_CLIENT_2630;
 			qd->client_version = 2010;
 		}
 	}

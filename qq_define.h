@@ -33,7 +33,7 @@
 #define QQ_PACKET_TAG			0x02	/* all QQ text packets starts with it */
 #define QQ_PACKET_TAIL			0x03	/* all QQ text packets end with it */
 
-#define QQ_CLIENT_1E0D 0x1E0D   /* QQ2010 Intl */
+#define QQ_CLIENT_2630 0x2630   /* QQ2010 Intl */
 const gchar *qq_get_ver_desc(gint source);
 
 /* list of known QQ commands */
