@@ -16,7 +16,7 @@ The 2 byte version string at the beginning of every message has been changed to
 
 == New message ==
 
-A new message has been introduced that is used when AND ONLY WHEN a captcha is being sent by the server.
+A new message has been introduced that is used when AND ONLY WHEN a captcha is being sent by the server. It's sent after the server has sent image data for the captcha.
 
 The client sends:
 {{{
