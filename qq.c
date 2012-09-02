@@ -57,13 +57,16 @@
 #include "utils.h"
 #include "version.h"
 
-#define LIBQQ_VERSION 		"0.71"
+#define LIBQQ_VERSION 		"0.72"
 
 static GList *server_list_build(gchar select)
 {
 	GList *list = NULL;
 
 	if ( select == 'T' || select == 'A') {
+		list = g_list_append(list, "219.133.60.173:443");
+		list = g_list_append(list, "219.133.49.125:443");
+		list = g_list_append(list, "58.60.15.33:443");
 		list = g_list_append(list, "tcpconn.tencent.com:8000");
 		list = g_list_append(list, "tcpconn2.tencent.com:8000");
 		list = g_list_append(list, "tcpconn3.tencent.com:8000");
@@ -72,6 +75,9 @@ static GList *server_list_build(gchar select)
 		list = g_list_append(list, "tcpconn6.tencent.com:8000");
 	}
 	if ( select == 'U' || select == 'A') {
+		list = g_list_append(list, "219.133.49.171:8000");
+		list = g_list_append(list, "58.60.14.37:8000");
+		list = g_list_append(list, "219.133.60.36:8000");
 		list = g_list_append(list, "sz.tencent.com:8000");
 		list = g_list_append(list, "sz2.tencent.com:8000");
 		list = g_list_append(list, "sz3.tencent.com:8000");
@@ -157,12 +163,20 @@ static void qq_login(PurpleAccount *account)
 	purple_debug_info("QQ", "Server list has %d\n", g_list_length(qd->servers));
 
 	version_str = purple_account_get_string(account, "client_version", NULL);
-	qd->client_tag = QQ_CLIENT_1E0D;	/* set default as QQ2010 */
-	qd->client_version = 2010;
+	qd->client_tag = QQ_CLIENT_2227;	/* set default as QQ2011 */
+	qd->client_version = 2011;
 	if (version_str != NULL && strlen(version_str) != 0) {
 		if (strcmp(version_str, "qq2010") == 0) {
 			qd->client_tag = QQ_CLIENT_1E0D;
 			qd->client_version = 2010;
+		}
+		if (strcmp(version_str, "qq2011") == 0) {
+			qd->client_tag = QQ_CLIENT_2227;
+			qd->client_version = 2011;
+		}
+		if (strcmp(version_str, "qq2012") == 0) {
+			qd->client_tag = QQ_CLIENT_2227;
+			qd->client_version = 2012;
 		}
 	}
 
@@ -662,6 +676,7 @@ static void action_about_libqq(PurplePluginAction *action)
 	g_string_append(info, "icesky : maintainer since 2007<br>\n");
 	g_string_append(info, "csyfek : faces, maintainer since 2007<br>\n");
 	g_string_append(info, "V.E.O : maintainer since 2011, OpenQ rename to LibQQ<br>\n");
+	g_string_append(info, "cnangel : maintainer since 2012<br>\n");
 	g_string_append(info, "<br>\n");
 
 	g_string_append(info, _("<p><b>Lovely Patch Writers</b>:<br>\n"));
@@ -684,7 +699,8 @@ static void action_about_libqq(PurplePluginAction *action)
 	g_string_append(info, "Pidgin Team : http://www.pidgin.im<br>\n");
 	g_string_append(info, "Huang Guan : http://home.xxsyzx.com<br>\n");
 	g_string_append(info, "OpenQ Google Group : http://groups.google.com/group/openq<br>\n");
-	g_string_append(info, "LibQQ Google code : http://libqq-pidgin.googlecode.com<br>\n");
+	g_string_append(info, "LibQQ Google Code : http://libqq-pidgin.googlecode.com<br>\n");
+	g_string_append(info, "LibQQ Github Code : https://github.com/cnangel/pidgin-libqq<br>\n");
 	g_string_append(info, "<br>\n");
 
 	g_string_append(info, _("<p><b>Scrupulous Testers</b>:<br>\n"));
@@ -1196,6 +1212,16 @@ static void init_plugin(PurplePlugin *plugin)
 	kvp = g_new0(PurpleKeyValuePair, 1);
 	kvp->key = g_strdup(_("QQ2010"));
 	kvp->value = g_strdup("qq2010");
+	version_kv_list = g_list_append(version_kv_list, kvp);
+
+	kvp = g_new0(PurpleKeyValuePair, 1);
+	kvp->key = g_strdup(_("QQ2011"));
+	kvp->value = g_strdup("qq2011");
+	version_kv_list = g_list_append(version_kv_list, kvp);
+
+	kvp = g_new0(PurpleKeyValuePair, 1);
+	kvp->key = g_strdup(_("QQ2012"));
+	kvp->value = g_strdup("qq2012");
 	version_kv_list = g_list_append(version_kv_list, kvp);
 
 	option = purple_account_option_list_new(_("Client Version"), "client_version", version_kv_list);
