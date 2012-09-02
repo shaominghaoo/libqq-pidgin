@@ -677,6 +677,7 @@ static void action_about_libqq(PurplePluginAction *action)
 	g_string_append(info, "csyfek : faces, maintainer since 2007<br>\n");
 	g_string_append(info, "V.E.O : maintainer since 2011, OpenQ rename to LibQQ<br>\n");
 	g_string_append(info, "cnangel : maintainer since 2012<br>\n");
+	g_string_append(info, "worr : maintainer / AdiumQQ developer<br>\n");
 	g_string_append(info, "<br>\n");
 
 	g_string_append(info, _("<p><b>Lovely Patch Writers</b>:<br>\n"));
